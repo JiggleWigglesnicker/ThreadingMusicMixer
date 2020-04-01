@@ -8157,11 +8157,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Prime Knight\\source\\repos\\MusicMixer\\MusicMixer\\MusicMixer.csproj",
+      "projectUniqueName": "C:\\Users\\Prime Knight\\Source\\Repos\\ThreadingMusicMixer\\MusicMixer\\MusicMixer.csproj",
       "projectName": "MusicMixer",
-      "projectPath": "C:\\Users\\Prime Knight\\source\\repos\\MusicMixer\\MusicMixer\\MusicMixer.csproj",
+      "projectPath": "C:\\Users\\Prime Knight\\Source\\Repos\\ThreadingMusicMixer\\MusicMixer\\MusicMixer.csproj",
       "packagesPath": "C:\\Users\\Prime Knight\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Prime Knight\\source\\repos\\MusicMixer\\MusicMixer\\obj\\",
+      "outputPath": "C:\\Users\\Prime Knight\\Source\\Repos\\ThreadingMusicMixer\\MusicMixer\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [

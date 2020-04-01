@@ -1,4 +1,7 @@
-﻿using System;
+﻿using MusicMixer.musiclistitems;
+using MusicMixer.musicplayer;
+using MusicMixer.socialmedia;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -22,6 +25,11 @@ namespace MusicMixer
     /// </summary>
     public sealed partial class MainPage : Page
     {
+
+        private TwinPlayer twinPlayer;
+        private MusicLibrary musicLibrary;
+        private SocialMediaHandler socialHand;
+
         public MainPage()
         {
             this.InitializeComponent();

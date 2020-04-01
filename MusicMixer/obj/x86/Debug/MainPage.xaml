@@ -23,20 +23,20 @@
         
         <StackPanel Grid.Row="1" Grid.Column="0">
 
-            <Button Background="White"
+            <Button 
                     Width="355"
                     Height="100"
-                    Content="Click"
+                    Content="Library"
                     FontSize="20"
                     BorderBrush="Black"
                     HorizontalAlignment="Center"
                     
                 />
             
-            <Button Background="White"
+            <Button 
                     Width="355"
                     Height="100"
-                    Content="Click"
+                    Content="Metronome"
                     FontSize="20"
                     BorderBrush="Black"
                     HorizontalAlignment="Center"
