@@ -23,85 +23,69 @@
 
         </Grid.RowDefinitions>
 
-        <StackPanel Background="LightGray" Grid.Row="1" Grid.Column="0">
+        <RelativePanel Background="LightGray" Grid.Row="1" Grid.Column="0">
 
             <Button x:Name="libBtn"
-                    Width="300"
-                    Height="50"
-                    Content="Library"
-                    FontSize="20"
-                    BorderBrush="Black"
-                    HorizontalAlignment="Center"
+                Width="300"
+                Height="50"
+                Content="Library"
+                FontSize="20"
+                BorderBrush="Black"
                     
             />
 
             <Button x:Name="metroBtn"
-                    Width="300"
-                    Height="50"
-                    Content="Social"
-                    FontSize="20"
-                    BorderBrush="Black"
-                    HorizontalAlignment="Center"
+                Width="300"
+                Content="Social"
+                FontSize="20"
+                BorderBrush="Black"
+                Height="50" RelativePanel.Below="libBtn"
             />
 
             <Button x:Name="socialBtn"
-                    Width="300"
-                    Height="50"
-                    Content="Metronome"
-                    FontSize="20"
-                    BorderBrush="Black"
-                    HorizontalAlignment="Center"
+                Width="300"
+                Height="50"
+                Content="Metronome"
+                FontSize="20"
+                BorderBrush="Black" RelativePanel.Below="metroBtn"
             />
 
             <controls:NumberBox x:Name="BeginNumberBox"
-                   Width="300"
-                   Height="50"
-                   Header="Enter BPM:" 
-                   Value="128" 
-                   SpinButtonPlacementMode="Compact" 
-                   SmallChange="10"
-                   LargeChange="100"/>
-
+                Width="300"
+                Height="50"
+                Header="Enter BPM:" 
+                Value="128" 
+                SpinButtonPlacementMode="Compact" 
+                SmallChange="10"
+                LargeChange="100" RelativePanel.Below="socialBtn"/>
             <Button x:Name="playBtn"
-                    Width="150"
-                    Height="50"
-                    Content="Play"
-                    FontSize="20"
-                    BorderBrush="Black"
-                    HorizontalAlignment="Left"
+                Width="112"
+                Height="50"
+                Content="Play"
+                FontSize="20"
+                BorderBrush="Black" RelativePanel.RightOf="" RelativePanel.AlignRightWithPanel="True"
             />
-
             <Button x:Name="pauseBtn"
-                    Width="150"
-                    Height="50"
-                    Content="Play"
-                    FontSize="20"
-                    BorderBrush="Black"
-                    HorizontalAlignment="Right"
+                Width="111"
+                Height="50"
+                Content="Pause"
+                FontSize="20"
+                BorderBrush="Black" RelativePanel.AlignRightWithPanel="True" RelativePanel.Below="playBtn"
             />
 
 
 
-        </StackPanel>
+        </RelativePanel>
 
         <ScrollViewer Background="DarkGray">
 
-            <ListView  Margin="30" Background="DimGray" Grid.Row="0" Grid.Column="0">
-
-
-            </ListView>
+            <ListView  Margin="30" Background="DimGray" Grid.Row="0" Grid.Column="0"/>
 
         </ScrollViewer>
 
-        <StackPanel Background="LightSteelBlue" Grid.Row="0" Grid.Column="1">
+        <StackPanel Background="LightSteelBlue" Grid.Row="0" Grid.Column="1" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2" Margin="0,0,10,0"/>
 
-
-
-        </StackPanel>
-
-        <Grid Background="Gray" Grid.Row="1" Grid.Column="1">
-
-        </Grid>
+        <Grid Background="Gray" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Margin="0,0,10,0"/>
 
     </Grid>
 </Page>
