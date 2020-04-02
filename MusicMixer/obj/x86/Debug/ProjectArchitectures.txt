@@ -1,1 +1,1 @@
-C:\Users\Prime Knight\Source\Repos\ThreadingMusicMixer\MusicMixer\MusicMixer.csproj;x86
+C:\Users\Prime Knight\source\repos\ThreadingMusicMixer\MusicMixer\MusicMixer.csproj;x86

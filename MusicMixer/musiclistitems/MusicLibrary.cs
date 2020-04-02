@@ -12,9 +12,9 @@ namespace MusicMixer.musiclistitems
 
         private MusicList musicList;
 
-        public MusicLibrary()
+        public MusicLibrary(MusicList musicList)
         {
-
+            musicList = musicList;
         }
 
         public String getNameLibrary()

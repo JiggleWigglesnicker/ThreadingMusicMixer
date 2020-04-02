@@ -28,11 +28,15 @@ namespace MusicMixer
 
         private TwinPlayer twinPlayer;
         private MusicLibrary musicLibrary;
+        private MusicList musicAL = new MusicAlbum();
         private SocialMediaHandler socialHand;
 
         public MainPage()
         {
+            musicLibrary = new MusicLibrary(musicAL);
             this.InitializeComponent();
+            musicAL.CreateSelectFolder();
         }
     }
 }
+2

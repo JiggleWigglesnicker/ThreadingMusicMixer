@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "LjYHM7KQQ2Sm/Kq/V7kqJ9hmwQptrzGLiRNsZ69tJKKY2pmN2Zl6a0VRP9atA0buDKoAK8h7DvN19lZWwabQJA==",
+  "dgSpecHash": "ULfZtz7uu9zElPc7/nGC0t95KCe+7C9eQu3rg/qN+Z9TsmFO/7kA+DMUCmidNW9MZpaXNTt7m8mhH5plp8csJg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Prime Knight\\Source\\Repos\\ThreadingMusicMixer\\MusicMixer\\MusicMixer.csproj",
+  "projectFilePath": "C:\\Users\\Prime Knight\\source\\repos\\ThreadingMusicMixer\\MusicMixer\\MusicMixer.csproj",
   "expectedPackageFiles": [
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\microsoft.net.native.compiler\\2.2.7-rel-27913-00\\microsoft.net.native.compiler.2.2.7-rel-27913-00.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\microsoft.net.uwpcoreruntimesdk\\2.2.9\\microsoft.net.uwpcoreruntimesdk.2.2.9.nupkg.sha512",

@@ -10,7 +10,7 @@
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>11973de6-8f57-461b-bc97-dc8db52a37d1</PackageIdentityName>
     <PackageIdentityPublisher>CN=Prime Knight</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\Users\Prime Knight\Source\Repos\ThreadingMusicMixer\MusicMixer\obj\x86\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\Prime Knight\source\repos\ThreadingMusicMixer\MusicMixer\obj\x86\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType>
     </RemoteDeploymentType>
     <PackageRegistrationPath>
@@ -18,7 +18,7 @@
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>C:\Users\Prime Knight\Source\Repos\ThreadingMusicMixer\MusicMixer\bin\x86\Debug\AppX</LayoutDir>
+    <LayoutDir>C:\Users\Prime Knight\source\repos\ThreadingMusicMixer\MusicMixer\bin\x86\Debug\AppX</LayoutDir>
     <RegisteredManifestChecksum>75E2FB156BCDCB983D76E922CB36D267223C9DBF7AF3851A4346DCB911CE9D2C</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>11973de6-8f57-461b-bc97-dc8db52a37d1_1.0.0.0_x86__zmq6vqyzvekyc</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>11973de6-8f57-461b-bc97-dc8db52a37d1_zmq6vqyzvekyc!App</RegisteredUserModeAppID>
@@ -27,16 +27,16 @@
     <RegisteredVersion>1.0.0.0</RegisteredVersion>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\Prime Knight\Source\Repos\ThreadingMusicMixer\MusicMixer\bin\x86\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\Prime Knight\source\repos\ThreadingMusicMixer\MusicMixer\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-04-01T11:33:41.763</Modified>
+      <Modified>2020-04-02T10:14:54.027</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\Prime Knight\Source\Repos\ThreadingMusicMixer\MusicMixer\bin\x86\Debug\MusicMixer.exe">
+    <AppxPackagedFile Include="C:\Users\Prime Knight\source\repos\ThreadingMusicMixer\MusicMixer\bin\x86\Debug\MusicMixer.exe">
       <PackagePath>entrypoint\MusicMixer.exe</PackagePath>
-      <Modified>2020-04-01T11:33:40.854</Modified>
+      <Modified>2020-04-02T10:14:53.593</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.2.9\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
@@ -46,67 +46,67 @@
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
       <Modified>2019-03-18T16:36:56.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Prime Knight\Source\Repos\ThreadingMusicMixer\MusicMixer\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="C:\Users\Prime Knight\source\repos\ThreadingMusicMixer\MusicMixer\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
       <Modified>2020-04-01T11:33:26.539</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Prime Knight\Source\Repos\ThreadingMusicMixer\MusicMixer\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Prime Knight\source\repos\ThreadingMusicMixer\MusicMixer\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
       <Modified>2020-04-01T11:33:26.522</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Prime Knight\Source\Repos\ThreadingMusicMixer\MusicMixer\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Prime Knight\source\repos\ThreadingMusicMixer\MusicMixer\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2020-04-01T11:33:26.523</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Prime Knight\Source\Repos\ThreadingMusicMixer\MusicMixer\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Prime Knight\source\repos\ThreadingMusicMixer\MusicMixer\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2020-04-01T11:33:26.525</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Prime Knight\Source\Repos\ThreadingMusicMixer\MusicMixer\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Prime Knight\source\repos\ThreadingMusicMixer\MusicMixer\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2020-04-01T11:33:26.526</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Prime Knight\Source\Repos\ThreadingMusicMixer\MusicMixer\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\Users\Prime Knight\source\repos\ThreadingMusicMixer\MusicMixer\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2020-04-01T11:33:26.527</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Prime Knight\Source\Repos\ThreadingMusicMixer\MusicMixer\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\Prime Knight\source\repos\ThreadingMusicMixer\MusicMixer\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2020-04-01T11:33:26.528</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Prime Knight\Source\Repos\ThreadingMusicMixer\MusicMixer\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Prime Knight\source\repos\ThreadingMusicMixer\MusicMixer\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2020-04-01T11:33:26.529</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Prime Knight\Source\Repos\ThreadingMusicMixer\MusicMixer\bin\x86\Debug\MusicMixer.xr.xml">
+    <AppxPackagedFile Include="C:\Users\Prime Knight\source\repos\ThreadingMusicMixer\MusicMixer\bin\x86\Debug\MusicMixer.xr.xml">
       <PackagePath>MusicMixer.xr.xml</PackagePath>
-      <Modified>2020-04-01T11:33:40.670</Modified>
+      <Modified>2020-04-02T10:08:12.038</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Prime Knight\Source\Repos\ThreadingMusicMixer\MusicMixer\bin\x86\Debug\App.xbf">
+    <AppxPackagedFile Include="C:\Users\Prime Knight\source\repos\ThreadingMusicMixer\MusicMixer\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2020-04-01T11:33:40.693</Modified>
+      <Modified>2020-04-02T10:14:53.446</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Prime Knight\Source\Repos\ThreadingMusicMixer\MusicMixer\bin\x86\Debug\MainPage.xbf">
+    <AppxPackagedFile Include="C:\Users\Prime Knight\source\repos\ThreadingMusicMixer\MusicMixer\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2020-04-01T11:33:40.694</Modified>
+      <Modified>2020-04-02T10:14:53.447</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.18362.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
       <Modified>2019-03-18T15:33:42.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Prime Knight\Source\Repos\ThreadingMusicMixer\MusicMixer\bin\x86\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\Prime Knight\source\repos\ThreadingMusicMixer\MusicMixer\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2020-04-01T11:33:41.179</Modified>
+      <Modified>2020-04-02T10:08:12.673</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Prime Knight\Source\Repos\ThreadingMusicMixer\MusicMixer\bin\x86\Debug\Core\MusicMixer.exe">
+    <AppxPackagedFile Include="C:\Users\Prime Knight\source\repos\ThreadingMusicMixer\MusicMixer\bin\x86\Debug\Core\MusicMixer.exe">
       <PackagePath>MusicMixer.exe</PackagePath>
-      <Modified>2020-04-01T11:33:41.735</Modified>
+      <Modified>2020-04-02T10:14:54.008</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
