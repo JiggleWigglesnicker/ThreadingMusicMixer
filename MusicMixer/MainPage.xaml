@@ -6,13 +6,15 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    xmlns:controls="using:Microsoft.UI.Xaml.Controls">
 
     <Grid>
 
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="1*"/>
-            <ColumnDefinition Width="3*" />
+            <ColumnDefinition Width="60*"/>
+            <ColumnDefinition Width="7*" />
+            <ColumnDefinition Width="173*"/>
         </Grid.ColumnDefinitions>
 
         <Grid.RowDefinitions>
@@ -36,7 +38,7 @@
             <Button x:Name="metroBtn"
                     Width="300"
                     Height="50"
-                    Content="Metronome"
+                    Content="Social"
                     FontSize="20"
                     BorderBrush="Black"
                     HorizontalAlignment="Center"
@@ -45,11 +47,20 @@
             <Button x:Name="socialBtn"
                     Width="300"
                     Height="50"
-                    Content="Social"
+                    Content="Metronome"
                     FontSize="20"
                     BorderBrush="Black"
                     HorizontalAlignment="Center"
             />
+
+            <controls:NumberBox x:Name="BeginNumberBox"
+                   Width="300"
+                   Height="50"
+                   Header="Enter BPM:" 
+                   Value="128" 
+                   SpinButtonPlacementMode="Compact" 
+                   SmallChange="10"
+                   LargeChange="100"/>
 
             <Button x:Name="playBtn"
                     Width="150"
