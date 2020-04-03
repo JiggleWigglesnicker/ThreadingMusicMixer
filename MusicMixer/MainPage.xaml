@@ -51,26 +51,19 @@
             />
 
             <controls:NumberBox x:Name="BeginNumberBox"
-                Width="300"
+                Width="77"
                 Height="50"
                 Header="Enter BPM:" 
                 Value="128" 
                 SpinButtonPlacementMode="Compact" 
                 SmallChange="10"
-                LargeChange="100" RelativePanel.Below="socialBtn"/>
+                LargeChange="100" Margin="0,0,0,0" RelativePanel.AlignRightWithPanel="True" RelativePanel.Below="playBtn"/>
             <Button x:Name="playBtn"
                 Width="112"
                 Height="50"
-                Content="Play"
+                Content="Start/Stop"
                 FontSize="20"
                 BorderBrush="Black" RelativePanel.RightOf="" RelativePanel.AlignRightWithPanel="True"
-            />
-            <Button x:Name="pauseBtn"
-                Width="111"
-                Height="50"
-                Content="Pause"
-                FontSize="20"
-                BorderBrush="Black" RelativePanel.AlignRightWithPanel="True" RelativePanel.Below="playBtn"
             />
 
 
