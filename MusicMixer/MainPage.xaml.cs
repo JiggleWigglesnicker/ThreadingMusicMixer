@@ -36,6 +36,7 @@ namespace MusicMixer
         private MusicAlbum musicAL = new MusicAlbum();
         private SocialMediaHandler socialHand;
         private Thread metroThread;
+        public  Boolean bpmStop;
 
 
         public MainPage()
@@ -44,6 +45,7 @@ namespace MusicMixer
             ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.PreferredLaunchViewSize;
             this.InitializeComponent();
             musicAL.CreateSelectFolder();
+            bpmStop = false;
         }
         void bpmClick(object sender, RoutedEventArgs e)
         {
@@ -52,10 +54,19 @@ namespace MusicMixer
             if (metroThread == null)
             {
                 double bpmval = bpmNumber.Value;
-                metroThread = new Thread(() => patatje.Beep(bpmval));
+                metroThread = new Thread(() => patatje.Beep(bpmval, this));
                 metroThread.Start();
+            } else
+            {
+                bpmStop = true;
+                metroThread = null;
             }
             
+        }
+
+        public void setBpmStop ()
+        {
+            this.bpmStop = false;
         }
     }
 }
