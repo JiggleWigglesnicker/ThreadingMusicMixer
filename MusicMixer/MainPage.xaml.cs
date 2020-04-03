@@ -40,5 +40,9 @@ namespace MusicMixer
             this.InitializeComponent();
             musicAL.CreateSelectFolder();
         }
+        void bpmClick(object sender, RoutedEventArgs e)
+        {
+            playBtn.Foreground = new SolidColorBrush(Windows.UI.Colors.Blue);
+        }
     }
 }

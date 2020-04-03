@@ -61,6 +61,7 @@
             <Button x:Name="playBtn"
                 Width="112"
                 Height="50"
+                Click="bpmClick" ClickMode="Hover"
                 Content="Start/Stop"
                 FontSize="20"
                 BorderBrush="Black" RelativePanel.RightOf="" RelativePanel.AlignRightWithPanel="True"
