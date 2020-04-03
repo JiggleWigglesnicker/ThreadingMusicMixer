@@ -2,48 +2,35 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
+using System.Timers;
 
 namespace MusicMixer.metronome
 {
     class Metronome
     {
 
-        private double speed;
+        private int bpm;
         private int ticks;
 
-        public Metronome()
+        public Metronome(int bpm)
         {
-
+            bpm = this.bpm;
         }
 
-        public void setTicks(int ticks)
+        private double BpmToSeconds()
         {
-            this.ticks = ticks;
+            return TimeSpan.FromSeconds(60 / bpm).TotalMilliseconds;
         }
 
-        public int getTicks()
+        private void Beep()
         {
-            return ticks;
-        }
-
-        public void setSpeed(double speed)
-        {
-            this.speed = speed;
-        }
-
-        public double getSpeed()
-        {
-            return speed;
-        }
-
-        public void start()
-        {
-
-        }
-
-        public void stop()
-        {
+            while (true)
+            {
+                Console.Beep(4000, 100);
+                Thread.Sleep(Convert.ToInt32(BpmToSeconds()));
+            }
         }
     }
 }
