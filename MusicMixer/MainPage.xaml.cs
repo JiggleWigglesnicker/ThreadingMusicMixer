@@ -17,6 +17,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using MUXC = Microsoft.UI.Xaml.Controls;
+using System.Threading;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -29,17 +30,13 @@ namespace MusicMixer
     {
 
         private TwinPlayer twinPlayer;
-        private MusicLibrary musicLibrary;
-        private MusicList musicAL = new MusicAlbum();
+        private MusicAlbum musicAL = new MusicAlbum();
         private SocialMediaHandler socialHand;
 
         public MainPage()
         {
             ApplicationView.PreferredLaunchViewSize = new Size(1920, 1080);
             ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.PreferredLaunchViewSize;
-            
-            
-            musicLibrary = new MusicLibrary(musicAL);
             this.InitializeComponent();
             musicAL.CreateSelectFolder();
         }
