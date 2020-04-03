@@ -35,6 +35,7 @@ namespace MusicMixer
 
         public MainPage()
         {
+            
             ApplicationView.PreferredLaunchViewSize = new Size(1920, 1080);
             ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.PreferredLaunchViewSize;
             this.InitializeComponent();
