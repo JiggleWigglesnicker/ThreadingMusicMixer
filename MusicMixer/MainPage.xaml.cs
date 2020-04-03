@@ -29,15 +29,13 @@ namespace MusicMixer
     {
 
         private TwinPlayer twinPlayer;
-        private MusicLibrary musicLibrary;
-        private MusicList musicAL = new MusicAlbum();
+        private MusicAlbum musicAL = new MusicAlbum();
         private SocialMediaHandler socialHand;
 
         public MainPage()
         {
             ApplicationView.PreferredLaunchViewSize = new Size(1920, 1080);
             ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.PreferredLaunchViewSize;
-            musicLibrary = new MusicLibrary(musicAL);
             this.InitializeComponent();
             musicAL.CreateSelectFolder();
         }
