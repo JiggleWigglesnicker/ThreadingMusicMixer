@@ -18,6 +18,9 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using MUXC = Microsoft.UI.Xaml.Controls;
 using System.Threading;
+using MusicMixer.metronome;
+using System.Diagnostics;
+using ThreadState = System.Threading.ThreadState;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -32,10 +35,11 @@ namespace MusicMixer
         private TwinPlayer twinPlayer;
         private MusicAlbum musicAL = new MusicAlbum();
         private SocialMediaHandler socialHand;
+        private Thread metroThread;
+
 
         public MainPage()
         {
-            
             ApplicationView.PreferredLaunchViewSize = new Size(1920, 1080);
             ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.PreferredLaunchViewSize;
             this.InitializeComponent();
@@ -44,6 +48,14 @@ namespace MusicMixer
         void bpmClick(object sender, RoutedEventArgs e)
         {
             playBtn.Foreground = new SolidColorBrush(Windows.UI.Colors.Blue);
+            Metronome patatje = new Metronome();
+            if (metroThread == null)
+            {
+                double bpmval = bpmNumber.Value;
+                metroThread = new Thread(() => patatje.Beep(bpmval));
+                metroThread.Start();
+            }
+            
         }
     }
 }
