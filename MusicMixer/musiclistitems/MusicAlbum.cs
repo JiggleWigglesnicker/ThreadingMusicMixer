@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.IO;
+using Windows.Storage;
 
 
 namespace MusicMixer.musiclistitems
@@ -40,32 +40,19 @@ namespace MusicMixer.musiclistitems
             this.artistName = artistName;
         }
 
-        public void CreateSelectFolder()
+        public async void CreateSelectFolder()
         {
-            // Specify the directory you want to manipulate.
-            String existingPath = @"D:/0Icons/Documents/music";
-            String path = @"D:/0Icons/Documents/";
-            
+            Windows.Storage.StorageFolder storageFolder = Windows.Storage.ApplicationData.Current.LocalFolder;
             try
             {
-                // Determine whether the directory exists.
-                if (Directory.Exists(existingPath))
-                {
-                    Console.WriteLine("That path exists already.");
-                    return;
-                }
-                else
-                {
-                    DirectoryInfo di = Directory.CreateDirectory(path);
-                    Console.WriteLine("The directory was created successfully at {0}.", Directory.GetCreationTime(path));
-                }
-
-
+                Windows.Storage.StorageFolder sampleFile = await storageFolder.CreateFolderAsync("Music223");
             }
-            catch (Exception e)
-            {
-                Console.WriteLine("The process failed: {0}", e.ToString());
+            catch (Exception e) {
+                Console.WriteLine("error {0}",e);
             }
+           
+            
+            
         }
 
     }
