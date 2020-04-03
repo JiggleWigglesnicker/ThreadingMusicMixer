@@ -37,6 +37,8 @@ namespace MusicMixer
         {
             ApplicationView.PreferredLaunchViewSize = new Size(1920, 1080);
             ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.PreferredLaunchViewSize;
+            
+            
             musicLibrary = new MusicLibrary(musicAL);
             this.InitializeComponent();
             musicAL.CreateSelectFolder();

@@ -10,11 +10,9 @@
     xmlns:controls="using:Microsoft.UI.Xaml.Controls">
 
     <Grid>
-
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="60*"/>
-            <ColumnDefinition Width="7*" />
-            <ColumnDefinition Width="173*"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="3*" />
         </Grid.ColumnDefinitions>
 
         <Grid.RowDefinitions>
@@ -23,19 +21,18 @@
 
         </Grid.RowDefinitions>
 
-        <RelativePanel Background="LightGray" Grid.Row="1" Grid.Column="0">
+        <RelativePanel x:Name="inputPanel" Background="LightGray" Grid.Row="1" Grid.Column="0">
 
             <Button x:Name="libBtn"
-                Width="300"
+                Width="150"
                 Height="50"
                 Content="Library"
                 FontSize="20"
                 BorderBrush="Black"
-                    
             />
 
             <Button x:Name="metroBtn"
-                Width="300"
+                Width="150"
                 Content="Social"
                 FontSize="20"
                 BorderBrush="Black"
@@ -43,7 +40,7 @@
             />
 
             <Button x:Name="socialBtn"
-                Width="300"
+                Width="150"
                 Height="50"
                 Content="Metronome"
                 FontSize="20"
@@ -51,41 +48,55 @@
             />
 
             <controls:NumberBox x:Name="BeginNumberBox"
-                Width="300"
+                Width="150"
                 Height="50"
                 Header="Enter BPM:" 
                 Value="128" 
                 SpinButtonPlacementMode="Compact" 
                 SmallChange="10"
-                LargeChange="100" RelativePanel.Below="socialBtn"/>
+                LargeChange="100" RelativePanel.Below="socialBtn"
+            />
+
             <Button x:Name="playBtn"
-                Width="112"
+                Width="150"
                 Height="50"
                 Content="Play"
                 FontSize="20"
                 BorderBrush="Black" RelativePanel.RightOf="" RelativePanel.AlignRightWithPanel="True"
             />
+
             <Button x:Name="pauseBtn"
-                Width="111"
+                Width="150"
                 Height="50"
                 Content="Pause"
                 FontSize="20"
                 BorderBrush="Black" RelativePanel.AlignRightWithPanel="True" RelativePanel.Below="playBtn"
             />
 
-
-
         </RelativePanel>
 
-        <ScrollViewer Background="DarkGray">
+        <ScrollViewer x:Name="sidePanel" Background="DarkGray">
 
             <ListView  Margin="30" Background="DimGray" Grid.Row="0" Grid.Column="0"/>
 
         </ScrollViewer>
 
-        <StackPanel Background="LightSteelBlue" Grid.Row="0" Grid.Column="1" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2" Margin="0,0,10,0"/>
+        <RelativePanel x:Name="mainPanel" Background="LightSteelBlue" Grid.Row="0" Grid.Column="1" RenderTransformOrigin="0.5,0.5">
+            <RelativePanel Background="red" Grid.Row="0" Grid.Column="1" RenderTransformOrigin="0.5,0.5" Height="770" Width="484">
+                
+            </RelativePanel>
+            
+            <RelativePanel Background="Yellow" Grid.Row="0" Grid.Column="1" RenderTransformOrigin="0.5,0.5" Height="688" Width="412">
+                
+            </RelativePanel>
+        </RelativePanel>
 
-        <Grid Background="Gray" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Margin="0,0,10,0"/>
+        <TextBlock
+                Text="Dual Music Player"
+                Margin="20"
+                HorizontalAlignment="center"
+        />
 
+        <StackPanel Background="Gray" Grid.Row="1" Grid.Column="1"/>
     </Grid>
 </Page>
