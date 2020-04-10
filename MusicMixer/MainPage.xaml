@@ -51,7 +51,7 @@
                 RelativePanel.Below="metroBtn"
             />
 
-            <controls:NumberBox x:Name="BeginNumberBox"
+            <controls:NumberBox x:Name="bpmNumber"
                 Width="77"
                 Height="50"
                 Header="Enter BPM:" 
@@ -64,7 +64,7 @@
             <Button x:Name="playBtn"
                 Width="112"
                 Height="50"
-                Click="bpmClick" ClickMode="Hover"
+                Click="bpmClick"
                 Content="Start/Stop"
                 FontSize="20"
                 BorderBrush="Black" RelativePanel.RightOf="" 
