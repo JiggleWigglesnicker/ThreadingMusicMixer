@@ -38,7 +38,8 @@
                 Content="Social"
                 FontSize="20"
                 BorderBrush="Black"
-                Height="50" RelativePanel.Below="libBtn"
+                Height="50" 
+                RelativePanel.Below="libBtn"
             />
 
             <Button x:Name="socialBtn"
@@ -46,7 +47,8 @@
                 Height="50"
                 Content="Metronome"
                 FontSize="20"
-                BorderBrush="Black" RelativePanel.Below="metroBtn"
+                BorderBrush="Black" 
+                RelativePanel.Below="metroBtn"
             />
 
             <controls:NumberBox x:Name="BeginNumberBox"
@@ -56,14 +58,17 @@
                 Value="128" 
                 SpinButtonPlacementMode="Compact" 
                 SmallChange="10"
-                LargeChange="100" Margin="0,0,0,0" RelativePanel.AlignRightWithPanel="True" RelativePanel.Below="playBtn"/>
+                LargeChange="100" Margin="0,0,0,0" 
+                RelativePanel.AlignRightWithPanel="True" 
+                RelativePanel.Below="playBtn"/>
             <Button x:Name="playBtn"
                 Width="112"
                 Height="50"
                 Click="bpmClick" ClickMode="Hover"
                 Content="Start/Stop"
                 FontSize="20"
-                BorderBrush="Black" RelativePanel.RightOf="" RelativePanel.AlignRightWithPanel="True"
+                BorderBrush="Black" RelativePanel.RightOf="" 
+                RelativePanel.AlignRightWithPanel="True"
             />
 
 
@@ -86,7 +91,30 @@
             </Grid.RowDefinitions>
 
             <RelativePanel Grid.Column="0" Grid.Row="0" Background="LightSteelBlue">
-                
+
+                <Button x:Name="ply1"
+                Width="150"
+                Height="50"
+                Content="Play"
+                FontSize="20" Click="ply1_Click"
+                />
+
+                <Button x:Name="pz1"
+                Width="150"
+                Height="50"
+                Content="Pauze"
+                FontSize="20"
+                RelativePanel.RightOf="ply1" Click="pz1_Click"
+                />
+
+                <Button x:Name="stp1"
+                Width="150"
+                Height="50"
+                Content="Stop"
+                FontSize="20"
+                RelativePanel.RightOf="pz1" Click="stp1_Click"
+                />
+
             </RelativePanel>
             
             <RelativePanel Grid.Column="1" Grid.Row="0" Background="LightCyan">

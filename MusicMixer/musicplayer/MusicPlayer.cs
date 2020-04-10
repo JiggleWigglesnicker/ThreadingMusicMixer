@@ -1,37 +1,51 @@
 ﻿using MusicMixer.musiclistitems;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
-
+using Windows.Media.Playback;
+using Windows.Media.Core;
+using System.Diagnostics;
 
 namespace MusicMixer.musicplayer
 {
-    class MusicPlayer : TwinPlayer
+    class MusicPlayer
     {
-        private double currentTime;
-
-        private double remainingTime;
+        MediaPlayer mPlayer;
+        bool playing;
 
         public MusicPlayer()
         {
-
+            mPlayer = new MediaPlayer();
+            playing = false;
         }
 
-        public void play(MusicTrack track)
+        public async void playTrack()
         {
+            Debug.WriteLine("Playing Music File");
+            Windows.Storage.StorageFolder folder = await Windows.ApplicationModel.Package.Current.InstalledLocation.GetFolderAsync(@"Assets");
+            Windows.Storage.StorageFile file = await folder.GetFileAsync("klaxon_beat.mp3");
 
+            mPlayer.AutoPlay = false;
+            mPlayer.Source = MediaSource.CreateFromStorageFile(file);
+
+            mPlayer.Play();
+            playing = true;
         }
 
-        public void stop(MusicTrack track)
+
+
+
+
+        static void test()
         {
-
+            Debug.WriteLine("testing thread");
         }
 
-        public void crossfade()
+        public void Player()
         {
-        }
+            Thread newthread = new Thread(test);
 
+            newthread.Start();
+        } 
     }
 }

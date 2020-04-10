@@ -32,10 +32,10 @@ namespace MusicMixer
         private TwinPlayer twinPlayer;
         private MusicAlbum musicAL = new MusicAlbum();
         private SocialMediaHandler socialHand;
+        private MusicPlayer musicPlayer = new MusicPlayer();
 
         public MainPage()
         {
-            
             ApplicationView.PreferredLaunchViewSize = new Size(1920, 1080);
             ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.PreferredLaunchViewSize;
             this.InitializeComponent();
@@ -44,6 +44,21 @@ namespace MusicMixer
         void bpmClick(object sender, RoutedEventArgs e)
         {
             playBtn.Foreground = new SolidColorBrush(Windows.UI.Colors.Blue);
+        }
+
+        private async void ply1_Click(object sender, RoutedEventArgs e)
+        {
+            musicPlayer.playTrack();
+        }
+
+        private void pz1_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void stp1_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
