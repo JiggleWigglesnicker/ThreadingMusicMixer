@@ -1,5 +1,4 @@
-﻿using MusicMixer.musiclistitems;
-using System;
+﻿using System;
 using System.Threading;
 using System.Threading.Tasks;
 using Windows.Media.Playback;
@@ -15,8 +14,8 @@ namespace MusicMixer.musicplayer
 
         public MusicPlayer()
         {
-            mPlayer = new MediaPlayer();
-            playing = false;
+            mPlayer = new MediaPlayer();        // initialize new mediaplayer
+            playing = false;                    // set playing bool to false
         }
 
         public async void playTrack()
@@ -32,20 +31,9 @@ namespace MusicMixer.musicplayer
             playing = true;
         }
 
-
-
-
-
-        static void test()
+        public void pauzeTrack()
         {
             Debug.WriteLine("testing thread");
         }
-
-        public void Player()
-        {
-            Thread newthread = new Thread(test);
-
-            newthread.Start();
-        } 
     }
 }
