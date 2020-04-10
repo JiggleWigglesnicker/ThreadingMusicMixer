@@ -123,15 +123,8 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="metronome\Metronome.cs" />
-    <Compile Include="musiclistitems\MusicAlbum.cs" />
-    <Compile Include="musiclistitems\MusicLibrary.cs" />
-    <Compile Include="musiclistitems\MusicList.cs" />
-    <Compile Include="musiclistitems\MusicTrack.cs" />
-    <Compile Include="musiclistitems\NoMetaDataList.cs" />
     <Compile Include="musicplayer\MusicPlayer.cs" />
-    <Compile Include="musicplayer\TwinPlayer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="socialmedia\SocialMediaHandler.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -139,6 +132,7 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\klaxon_beat.mp3" />
     <Content Include="Assets\LargeTile.scale-100.png" />
     <Content Include="Assets\LargeTile.scale-125.png" />
     <Content Include="Assets\LargeTile.scale-150.png" />
