@@ -23,7 +23,7 @@ using System.Diagnostics;
 using ThreadState = System.Threading.ThreadState;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
-
+// This page is the mainpage for the application.
 namespace MusicMixer
 {
     /// <summary>
