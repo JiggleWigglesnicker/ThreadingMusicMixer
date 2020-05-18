@@ -61,6 +61,11 @@ namespace MusicMixer
 
         private void stp1_Click(object sender, RoutedEventArgs e)
         {
+            musicPlayer.stopTrack();
+        }
+
+        private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
 
         }
     }
