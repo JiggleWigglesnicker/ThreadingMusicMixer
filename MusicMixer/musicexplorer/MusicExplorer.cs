@@ -2,30 +2,32 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-
+using System.Runtime.InteropServices.ComTypes;
 
 namespace MusicMixer.musicexplorer
 {
     class MusicExplorer
     {
-
+        private String path;
+        //BIND Track to buttons in view
         private HashSet<MusicFile> musicList = new HashSet<MusicFile>();
 
         public MusicExplorer()
         {
+            path = Path.Combine(Environment.CurrentDirectory, @"MusicFolder");
             CreateMusicFolder();
         }
 
         public bool CheckIfMusicFolderExist()
         {
-            return Directory.Exists("C:\\Users\\Prime Knight\\source\repos\\ThreadingMusicMixer\\MusicMixer\\MusicFolder");
+            return Directory.Exists(path);
         }
 
         public void CreateMusicFolder()
         {
             if (!CheckIfMusicFolderExist())
             {
-                Directory.CreateDirectory("C:\\Users\\Prime Knight\\source\repos\\ThreadingMusicMixer\\MusicMixer\\MusicFolder");
+                Directory.CreateDirectory(path);
             }
             else
             {
@@ -34,10 +36,13 @@ namespace MusicMixer.musicexplorer
 
         }
 
+        // moet MULTITHREADED
         public void FindNewMusic()
         {
-            foreach (File musictrack in  )
+            foreach (String musictrack in Directory.GetFiles(path))
             {
+                MusicFile musicFile = new MusicFile(musictrack);
+                musicList.Add(musicFile);
 
             }
         }
