@@ -24,7 +24,7 @@
 
         <RelativePanel Background="LightSteelBlue" Grid.Row="1" Grid.Column="0">
 
-            <Button x:Name="socialBtn"
+            <Button x:Name="metronomeBtn"
                 Width="300"
                 Height="50"
                 Content="Metronome"
@@ -41,14 +41,14 @@
                 SmallChange="10"
                 LargeChange="100" Margin="0,0,0,0" 
                 RelativePanel.AlignRightWithPanel="True" 
-                RelativePanel.Below="playBtn"/>
+                RelativePanel.Below="" RelativePanel.RightOf="playBtn"/>
             <Button x:Name="playBtn"
                 Width="112"
                 Height="50"
                 Click="bpmClick"
                 Content="Start/Stop"
                 FontSize="20"
-                BorderBrush="Black" RelativePanel.RightOf="" 
+                BorderBrush="Black" RelativePanel.RightOf="metronomeBtn" 
                 RelativePanel.AlignRightWithPanel="True"
             />
 
