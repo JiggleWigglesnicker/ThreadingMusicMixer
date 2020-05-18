@@ -82,6 +82,11 @@ namespace MusicMixer
             musicPlayer.changeChannel(+1);
         }
 
+        private void toggleMute_click(object sender, RoutedEventArgs e)
+        {
+            musicPlayer.toggleMute();
+        }
+
         private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 

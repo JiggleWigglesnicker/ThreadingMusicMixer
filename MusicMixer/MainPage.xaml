@@ -93,6 +93,7 @@
                 <Button x:Name="ply1"
                 Width="150"
                 Height="50"
+                Background="Green"
                 Content="Play"
                 FontSize="20" Click="ply1_Click" RelativePanel.Below="musicPlayer1Title" Margin="25,0,0,0"
                 />
@@ -100,30 +101,41 @@
                 <Button x:Name="pz1"
                 Width="150"
                 Height="50"
+                Background="OrangeRed"
                 Content="Pauze"
                 FontSize="20"
-                RelativePanel.RightOf="ply1" Click="pz1_Click" RelativePanel.Below="musicPlayer1Title" Margin="5,0,5,0"
+                RelativePanel.RightOf="ply1" Click="pz1_Click" RelativePanel.Below="musicPlayer1Title" Margin="25,0,0,0"
                 />
 
+                <Button x:Name="toggleMute1"
+                Width="150"
+                Height="50"
+                Content="(un)mute"
+                FontSize="20"
+                RelativePanel.RightOf="pz1" Click="toggleMute_click" RelativePanel.Below="musicPlayer1Title" Margin="25,0,0,0"
+                />
+
+
                 <Button x:Name="leftChannel1"
+                Width="150"
                 Height="50"
                 Content="Left Channel"
                 FontSize="20"
-                RelativePanel.RightOf="" Click="leftChannel1_click" RelativePanel.Below="pz1" Margin="25,0,5,0"
+                RelativePanel.RightOf="" Click="leftChannel1_click" RelativePanel.Below="pz1" Margin="25,25,0,0"
                 />
 
                 <Button x:Name="MiddleChannel1"
                 Height="50"
                 Content="Middle channel" 
                 FontSize="20"
-                RelativePanel.RightOf="leftChannel1" Click="middleChannel1_click" RelativePanel.Below="pz1" Margin="5,0,5,0"
+                RelativePanel.RightOf="leftChannel1" Click="middleChannel1_click" RelativePanel.Below="pz1" Margin="25,25,0,0"
                 />
                 
                 <Button x:Name="RightChannel1"
                 Height="50"
                 Content="Right channel"
                 FontSize="20"
-                RelativePanel.RightOf="MiddleChannel1" Click="rightChannel1_click" RelativePanel.Below="pz1" Margin="5,0,5,0"
+                RelativePanel.RightOf="MiddleChannel1" Click="rightChannel1_click" RelativePanel.Below="pz1" Margin="25,25,0,0"
                 />
 
 
@@ -131,6 +143,7 @@
             </RelativePanel>
 
             <RelativePanel Grid.Column="1" Grid.Row="0" Background="LightSteelBlue">
+                
 
             </RelativePanel>
 

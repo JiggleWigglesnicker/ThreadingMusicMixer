@@ -41,5 +41,17 @@ namespace MusicMixer.musicplayer
         {
             mPlayer.AudioBalance = channel;
         }
+
+        public void toggleMute()
+        {
+            if (mPlayer.IsMuted == false)
+            {
+                mPlayer.IsMuted = true;
+            }
+            else if(mPlayer.IsMuted == true)
+            {
+                mPlayer.IsMuted = false;
+            }
+        }
     }
 }
