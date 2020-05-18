@@ -8,15 +8,17 @@ namespace MusicMixer.metronome
 
         private double bpm;
 
-
-        public Metronome()
-        {
-        }
-
+        /**
+         * Converts the specified bpm to time between beats in miliseconds
+         * @Returns float
+         */
         private float BpmToMiliSeconds(double bpm)
         {
+            //Seconds in a minute
             float minute = 60;
+            //Converts the double to float
             float bpm1 = Convert.ToSingle(bpm);
+            //Returns time between beats in miliseconds
             return ((minute / bpm1) * 1000);
         }
 
