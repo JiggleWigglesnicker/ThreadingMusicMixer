@@ -22,7 +22,7 @@
 
         </Grid.RowDefinitions>
 
-        <RelativePanel Background="LightGray" Grid.Row="1" Grid.Column="0">
+        <RelativePanel Background="LightSteelBlue" Grid.Row="1" Grid.Column="0">
 
             <Button x:Name="socialBtn"
                 Width="300"
@@ -56,16 +56,9 @@
 
         </RelativePanel>
 
-        <ScrollViewer Background="DarkGray">
+        <ScrollViewer Background="LightSteelBlue">
 
-            <ListView  Margin="30" Background="DimGray" Grid.Row="0" Grid.Column="0">
-
-                <Button Background="Beige">
-                    <TextBlock  Text="Composition" FontSize="15" />
-                </Button>
-                <TextBlock  Text="Composition" />
-                <TextBlock  Text="Composition" />
-            </ListView>
+            <ListView  Margin="30" Background="DimGray" Grid.Row="0" Grid.Column="0" SelectionChanged="ListView_SelectionChanged"/>
 
         </ScrollViewer>
 
@@ -105,13 +98,13 @@
 
             </RelativePanel>
 
-            <RelativePanel Grid.Column="1" Grid.Row="0" Background="LightCyan">
-
+            <RelativePanel Grid.Column="1" Grid.Row="0" Background="LightSteelBlue">
+                
             </RelativePanel>
-
+            
         </Grid>
 
-        <Grid Background="Gray" Grid.Row="1" Grid.Column="1"/>
+        <Grid Background="LightSteelBlue" Grid.Row="1" Grid.Column="1" FocusVisualPrimaryBrush="#FFA20000" FocusVisualSecondaryBrush="#99C5FF00"/>
 
     </Grid>
 </Page>

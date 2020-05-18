@@ -28,12 +28,18 @@ namespace MusicMixer.musicplayer
             mPlayer.Source = MediaSource.CreateFromStorageFile(file);
 
             mPlayer.Play();
+            
             playing = true;
         }
 
         public void pauzeTrack()
         {
-            Debug.WriteLine("testing thread");
+            mPlayer.Pause();
+        }
+
+        public void stopTrack()
+        { 
+            
         }
     }
 }
