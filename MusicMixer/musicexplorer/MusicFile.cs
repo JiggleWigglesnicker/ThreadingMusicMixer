@@ -9,6 +9,6 @@ namespace MusicMixer.musicplayer
     class MusicFile
     {
         public String FileName { get; set; }
-
+        
     }
 }
