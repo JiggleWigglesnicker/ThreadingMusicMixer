@@ -37,9 +37,9 @@ namespace MusicMixer.musicplayer
             mPlayer.Pause();
         }
 
-        public void stopTrack()
-        { 
-            
+        public void changeChannel(int channel)
+        {
+            mPlayer.AudioBalance = channel;
         }
     }
 }

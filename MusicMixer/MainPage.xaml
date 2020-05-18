@@ -24,7 +24,7 @@
 
         <RelativePanel Background="LightSteelBlue" Grid.Row="1" Grid.Column="0">
 
-           
+
 
             <controls:NumberBox x:Name="bpmNumber"
                 Width="97"
@@ -60,7 +60,7 @@
 
         <ScrollViewer Background="LightSteelBlue">
 
-            <ListView  Margin="30" Background="DimGray" Grid.Row="0" Grid.Column="0" SelectionChanged="ListView_SelectionChanged">
+            <ListView  Margin="30" Background="CornflowerBlue" Grid.Row="0" Grid.Column="0" SelectionChanged="ListView_SelectionChanged">
                 <Button Background="Azure">
                     <TextBlock FontSize="15" > MusicTrack</TextBlock>
                 </Button>
@@ -105,7 +105,28 @@
                 RelativePanel.RightOf="ply1" Click="pz1_Click" RelativePanel.Below="musicPlayer1Title" Margin="5,0,5,0"
                 />
 
+                <Button x:Name="leftChannel1"
+                Height="50"
+                Content="Left Channel"
+                FontSize="20"
+                RelativePanel.RightOf="" Click="leftChannel1_click" RelativePanel.Below="pz1" Margin="25,0,5,0"
+                />
+
+                <Button x:Name="MiddleChannel1"
+                Height="50"
+                Content="Middle channel" 
+                FontSize="20"
+                RelativePanel.RightOf="leftChannel1" Click="middleChannel1_click" RelativePanel.Below="pz1" Margin="5,0,5,0"
+                />
                 
+                <Button x:Name="RightChannel1"
+                Height="50"
+                Content="Right channel"
+                FontSize="20"
+                RelativePanel.RightOf="MiddleChannel1" Click="rightChannel1_click" RelativePanel.Below="pz1" Margin="5,0,5,0"
+                />
+
+
 
             </RelativePanel>
 
@@ -115,7 +136,8 @@
 
         </Grid>
 
-        <Grid Background="LightSteelBlue" Grid.Row="1" Grid.Column="1" FocusVisualPrimaryBrush="#FFA20000" FocusVisualSecondaryBrush="#99C5FF00"/>
+        <Grid Background="LightSteelBlue" Grid.Row="1" Grid.Column="1" FocusVisualPrimaryBrush="#FFA20000" FocusVisualSecondaryBrush="#99C5FF00">
+        </Grid>
 
     </Grid>
 </Page>

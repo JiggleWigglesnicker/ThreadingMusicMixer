@@ -64,7 +64,22 @@ namespace MusicMixer
 
         private void stp1_Click(object sender, RoutedEventArgs e)
         {
-            musicPlayer.stopTrack();
+            //musicPlayer.stopTrack();
+        }
+
+        private void leftChannel1_click(object sender, RoutedEventArgs e)
+        {
+            musicPlayer.changeChannel(-1);
+        }
+
+        private void middleChannel1_click(object sender, RoutedEventArgs e)
+        {
+            musicPlayer.changeChannel(0);
+        }
+
+        private void rightChannel1_click(object sender, RoutedEventArgs e)
+        {
+            musicPlayer.changeChannel(+1);
         }
 
         private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
