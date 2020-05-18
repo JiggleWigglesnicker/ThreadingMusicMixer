@@ -27,7 +27,7 @@ namespace MusicMixer.metronome
         public void Beep(double bpm, MainPage main)
         {
             //setts the bpmstop boolean to false
-            main.setBpmStop();
+            main.SetBpmStop();
             //converts the given bpm to miliseconds for the intervals
             int intBpm = Convert.ToInt32(BpmToMiliSeconds(bpm));
             //sets the beeps sound
