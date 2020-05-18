@@ -22,43 +22,40 @@
 
         </Grid.RowDefinitions>
 
-        <RelativePanel Background="LightGray" Grid.Row="1" Grid.Column="0">
+        <RelativePanel Background="LightSteelBlue" Grid.Row="1" Grid.Column="0">
 
-            <Button x:Name="socialBtn"
-                Width="300"
-                Height="50"
-                Content="Metronome"
-                FontSize="20"
-                BorderBrush="Black" 
-            />
+           
 
             <controls:NumberBox x:Name="bpmNumber"
-                Width="77"
+                Width="97"
                 Height="50"
                 Header="Enter BPM:" 
                 Value="128" 
                 SpinButtonPlacementMode="Compact" 
                 SmallChange="10"
-                LargeChange="100" Margin="0,0,0,0" 
-                RelativePanel.AlignRightWithPanel="True" 
-                RelativePanel.Below="playBtn"/>
+                LargeChange="100" 
+                RelativePanel.Below="playBtn" RelativePanel.RightOf="" RelativePanel.AlignLeftWith="playBtn" RelativePanel.AlignRightWith="" RelativePanel.AlignRightWithPanel="True"/>
             <Button x:Name="playBtn"
                 Width="112"
                 Height="50"
                 Click="bpmClick"
                 Content="Start/Stop"
                 FontSize="20"
-                BorderBrush="Black" RelativePanel.RightOf="" 
-                RelativePanel.AlignRightWithPanel="True"
+                BorderBrush="Black" RelativePanel.RightOf="" RelativePanel.Below="" RelativePanel.AlignTopWith="" RelativePanel.AlignBottomWith="" RelativePanel.AlignRightWithPanel="True"
             />
+            <TextBlock x:Name="metronomeBoxTitle" FontSize="40" Text="Metronome" TextWrapping="Wrap" SelectionChanged="metronomeBoxTitle_SelectionChanged" RelativePanel.Above="" RelativePanel.Below="" RelativePanel.AlignLeftWithPanel="True"/>
 
 
 
         </RelativePanel>
 
-        <ScrollViewer Background="DarkGray">
+        <ScrollViewer Background="LightSteelBlue">
 
-            <ListView  Margin="30" Background="DimGray" Grid.Row="0" Grid.Column="0"/>
+            <ListView  Margin="30" Background="DimGray" Grid.Row="0" Grid.Column="0" SelectionChanged="ListView_SelectionChanged">
+                <Button Background="Azure">
+                    <TextBlock FontSize="15" > MusicTrack</TextBlock>
+                </Button>
+            </ListView>
 
         </ScrollViewer>
 
@@ -97,14 +94,14 @@
                 />
 
             </RelativePanel>
-            
-            <RelativePanel Grid.Column="1" Grid.Row="0" Background="LightCyan">
-                
+
+            <RelativePanel Grid.Column="1" Grid.Row="0" Background="LightSteelBlue">
+
             </RelativePanel>
-            
+
         </Grid>
 
-        <Grid Background="Gray" Grid.Row="1" Grid.Column="1"/>
+        <Grid Background="LightSteelBlue" Grid.Row="1" Grid.Column="1" FocusVisualPrimaryBrush="#FFA20000" FocusVisualSecondaryBrush="#99C5FF00"/>
 
     </Grid>
 </Page>
