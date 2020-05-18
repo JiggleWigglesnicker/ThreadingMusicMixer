@@ -1,12 +1,12 @@
-﻿using MusicMixer.musicplayer;
+﻿using MusicMixer.metronome;
+using MusicMixer.musicplayer;
 using System;
+using System.Threading;
 using Windows.Foundation;
 using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media;
-using System.Threading;
-using MusicMixer.metronome;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 // This page is the mainpage for the application.
@@ -18,35 +18,36 @@ namespace MusicMixer
     public sealed partial class MainPage : Page
     {
         private Thread metroThread;
-        public  Boolean bpmStop;
+        public Boolean bpmStop;
         private MusicPlayer musicPlayer = new MusicPlayer();
 
         public MainPage()
         {
             ApplicationView.PreferredLaunchViewSize = new Size(1920, 1080);
             ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.PreferredLaunchViewSize;
-            this.InitializeComponent();
+            InitializeComponent();
             bpmStop = false;
         }
         void bpmClick(object sender, RoutedEventArgs e)
         {
             playBtn.Foreground = new SolidColorBrush(Windows.UI.Colors.Blue);
-            Metronome patatje = new Metronome();
+            Metronome metronome = new Metronome();
             if (metroThread == null)
             {
                 double bpmval = bpmNumber.Value;
-                metroThread = new Thread(() => patatje.Beep(bpmval, this));
+                metroThread = new Thread(() => metronome.Beep(bpmval, this));
                 metroThread.Start();
-            } else
+            }
+            else
             {
                 bpmStop = true;
                 metroThread = null;
             }
         }
 
-        public void setBpmStop ()
+        public void setBpmStop()
         {
-            this.bpmStop = false;
+            bpmStop = false;
         }
 
         private async void ply1_Click(object sender, RoutedEventArgs e)

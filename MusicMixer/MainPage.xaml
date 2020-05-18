@@ -24,31 +24,12 @@
 
         <RelativePanel Background="LightSteelBlue" Grid.Row="1" Grid.Column="0">
 
-            <Button x:Name="libBtn"
-                Width="300"
-                Height="50"
-                Content="Library"
-                FontSize="20"
-                BorderBrush="Black"
-                    
-            />
-
-            <Button x:Name="metroBtn"
-                Width="300"
-                Content="Social"
-                FontSize="20"
-                BorderBrush="Black"
-                Height="50" 
-                RelativePanel.Below="libBtn"
-            />
-
             <Button x:Name="socialBtn"
                 Width="300"
                 Height="50"
                 Content="Metronome"
                 FontSize="20"
                 BorderBrush="Black" 
-                RelativePanel.Below="metroBtn"
             />
 
             <controls:NumberBox x:Name="bpmNumber"
