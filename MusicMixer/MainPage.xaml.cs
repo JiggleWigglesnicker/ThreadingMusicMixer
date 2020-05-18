@@ -69,5 +69,10 @@ namespace MusicMixer
         {
 
         }
+
+        private void metronomeBoxTitle_SelectionChanged(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

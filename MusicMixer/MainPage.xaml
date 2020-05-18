@@ -24,33 +24,26 @@
 
         <RelativePanel Background="LightSteelBlue" Grid.Row="1" Grid.Column="0">
 
-            <Button x:Name="metronomeBtn"
-                Width="300"
-                Height="50"
-                Content="Metronome"
-                FontSize="20"
-                BorderBrush="Black" 
-            />
+           
 
             <controls:NumberBox x:Name="bpmNumber"
-                Width="77"
+                Width="97"
                 Height="50"
                 Header="Enter BPM:" 
                 Value="128" 
                 SpinButtonPlacementMode="Compact" 
                 SmallChange="10"
-                LargeChange="100" Margin="0,0,0,0" 
-                RelativePanel.AlignRightWithPanel="True" 
-                RelativePanel.Below="" RelativePanel.RightOf="playBtn"/>
+                LargeChange="100" 
+                RelativePanel.Below="playBtn" RelativePanel.RightOf="" RelativePanel.AlignLeftWith="playBtn" RelativePanel.AlignRightWith="" RelativePanel.AlignRightWithPanel="True"/>
             <Button x:Name="playBtn"
                 Width="112"
                 Height="50"
                 Click="bpmClick"
                 Content="Start/Stop"
                 FontSize="20"
-                BorderBrush="Black" RelativePanel.RightOf="metronomeBtn" 
-                RelativePanel.AlignRightWithPanel="True"
+                BorderBrush="Black" RelativePanel.RightOf="" RelativePanel.Below="" RelativePanel.AlignTopWith="" RelativePanel.AlignBottomWith="" RelativePanel.AlignRightWithPanel="True"
             />
+            <TextBlock x:Name="metronomeBoxTitle" FontSize="40" Text="Metronome" TextWrapping="Wrap" SelectionChanged="metronomeBoxTitle_SelectionChanged" RelativePanel.Above="" RelativePanel.Below="" RelativePanel.AlignLeftWithPanel="True"/>
 
 
 
@@ -103,9 +96,9 @@
             </RelativePanel>
 
             <RelativePanel Grid.Column="1" Grid.Row="0" Background="LightSteelBlue">
-                
+
             </RelativePanel>
-            
+
         </Grid>
 
         <Grid Background="LightSteelBlue" Grid.Row="1" Grid.Column="1" FocusVisualPrimaryBrush="#FFA20000" FocusVisualSecondaryBrush="#99C5FF00"/>
