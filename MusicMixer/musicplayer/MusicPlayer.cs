@@ -35,6 +35,7 @@ namespace MusicMixer.musicplayer
         public void pauzeTrack()
         {
             mPlayer.Pause();
+
         }
 
         public void changeChannel(int channel)

@@ -32,7 +32,7 @@ namespace MusicMixer
             InitializeComponent();
             bpmStop = false;
         }
-        void bpmClick(object sender, RoutedEventArgs e)
+        void BpmClick(object sender, RoutedEventArgs e)
         {
             playBtn.Foreground = new SolidColorBrush(Windows.UI.Colors.Blue);
             Metronome metronome = new Metronome();
@@ -49,17 +49,17 @@ namespace MusicMixer
             }
         }
 
-        public void setBpmStop()
+        public void SetBpmStop()
         {
             bpmStop = false;
         }
 
-        private async void ply1_Click(object sender, RoutedEventArgs e)
+        private async void Ply1_Click(object sender, RoutedEventArgs e)
         {
             musicPlayer.playTrack();
         }
 
-        private void pz1_Click(object sender, RoutedEventArgs e)
+        private void Pz1_Click(object sender, RoutedEventArgs e)
         {
             musicPlayer.pauzeTrack();
         }
@@ -69,22 +69,22 @@ namespace MusicMixer
             //musicPlayer.stopTrack();
         }
 
-        private void leftChannel1_click(object sender, RoutedEventArgs e)
+        private void LeftChannel1_click(object sender, RoutedEventArgs e)
         {
             musicPlayer.changeChannel(-1);
         }
 
-        private void middleChannel1_click(object sender, RoutedEventArgs e)
+        private void MiddleChannel1_click(object sender, RoutedEventArgs e)
         {
             musicPlayer.changeChannel(0);
         }
 
-        private void rightChannel1_click(object sender, RoutedEventArgs e)
+        private void RightChannel1_click(object sender, RoutedEventArgs e)
         {
             musicPlayer.changeChannel(+1);
         }
 
-        private void toggleMute_click(object sender, RoutedEventArgs e)
+        private void ToggleMute_click(object sender, RoutedEventArgs e)
         {
             musicPlayer.toggleMute();
         }
@@ -94,7 +94,7 @@ namespace MusicMixer
 
         }
 
-        private void metronomeBoxTitle_SelectionChanged(object sender, RoutedEventArgs e)
+        private void MetronomeBoxTitle_SelectionChanged(object sender, RoutedEventArgs e)
         {
 
         }
