@@ -22,9 +22,11 @@ namespace MusicMixer
         public Boolean bpmStop;
         private MusicPlayer musicPlayer = new MusicPlayer();
         private MusicExplorer explorer = new MusicExplorer();
+        private FolderExplorer folder;
 
         public MainPage()
         {
+            folder = new FolderExplorer();
             ApplicationView.PreferredLaunchViewSize = new Size(1920, 1080);
             ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.PreferredLaunchViewSize;
             InitializeComponent();

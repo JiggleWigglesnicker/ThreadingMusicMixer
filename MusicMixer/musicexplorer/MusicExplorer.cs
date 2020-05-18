@@ -27,7 +27,7 @@ namespace MusicMixer.musicexplorer
         {
             if (!CheckIfMusicFolderExist())
             {
-                Directory.CreateDirectory(path);
+             //   Directory.CreateDirectory(path);
             }
             else
             {

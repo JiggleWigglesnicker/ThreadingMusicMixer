@@ -61,9 +61,7 @@
         <ScrollViewer Background="LightSteelBlue">
 
             <ListView  Margin="30" Background="CornflowerBlue" Grid.Row="0" Grid.Column="0" SelectionChanged="ListView_SelectionChanged">
-                <Button Background="Azure">
-                    <TextBlock FontSize="15" > MusicTrack</TextBlock>
-                </Button>
+                <TextBlock x:Name="Foldername" Text="FolderName" TextWrapping="Wrap"/>
             </ListView>
 
         </ScrollViewer>
