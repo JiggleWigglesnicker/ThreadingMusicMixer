@@ -58,7 +58,14 @@
 
         <ScrollViewer Background="DarkGray">
 
-            <ListView  Margin="30" Background="DimGray" Grid.Row="0" Grid.Column="0"/>
+            <ListView  Margin="30" Background="DimGray" Grid.Row="0" Grid.Column="0">
+
+                <Button Background="Beige">
+                    <TextBlock  Text="Composition" FontSize="15" />
+                </Button>
+                <TextBlock  Text="Composition" />
+                <TextBlock  Text="Composition" />
+            </ListView>
 
         </ScrollViewer>
 
@@ -97,11 +104,11 @@
                 />
 
             </RelativePanel>
-            
+
             <RelativePanel Grid.Column="1" Grid.Row="0" Background="LightCyan">
-                
+
             </RelativePanel>
-            
+
         </Grid>
 
         <Grid Background="Gray" Grid.Row="1" Grid.Column="1"/>

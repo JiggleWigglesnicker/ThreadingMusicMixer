@@ -124,6 +124,7 @@
     </Compile>
     <Compile Include="metronome\Metronome.cs" />
     <Compile Include="musicexplorer\MusicExplorer.cs" />
+    <Compile Include="musicplayer\MusicFile.cs" />
     <Compile Include="musicplayer\MusicPlayer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
