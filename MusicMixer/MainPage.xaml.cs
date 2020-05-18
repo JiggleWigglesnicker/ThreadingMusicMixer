@@ -1,4 +1,5 @@
 ﻿using MusicMixer.metronome;
+using MusicMixer.musicexplorer;
 using MusicMixer.musicplayer;
 using System;
 using System.Threading;
@@ -20,6 +21,7 @@ namespace MusicMixer
         private Thread metroThread;
         public Boolean bpmStop;
         private MusicPlayer musicPlayer = new MusicPlayer();
+        private MusicExplorer explorer = new MusicExplorer();
 
         public MainPage()
         {
