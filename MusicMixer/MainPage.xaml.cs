@@ -12,6 +12,7 @@ using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media;
+using System.Diagnostics;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 // This page is the mainpage for the application.
@@ -33,17 +34,20 @@ namespace MusicMixer
             explorer = new MusicExplorer();
             Task findMusic = new Task(async () =>
             {
+                Debug.WriteLine("test");
                 await explorer.FindNewMusic();
-               
+                //moet wachten tot task is uitgevoerd boven. anders null
+                CreateDynamicListItems();
+
             });
+
+            findMusic.RunSynchronously();
 
             ApplicationView.PreferredLaunchViewSize = new Windows.Foundation.Size(1920, 1080);
             ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.PreferredLaunchViewSize;
             InitializeComponent();
             bpmStop = false;
-
-            //moet wachten tot task is uitgevoerd boven. anders null
-            CreateDynamicListItems();
+            
         }
 
         public void CreateDynamicListItems()
