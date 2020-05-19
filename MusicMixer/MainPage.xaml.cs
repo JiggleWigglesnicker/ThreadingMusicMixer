@@ -3,6 +3,7 @@ using MusicMixer.musicexplorer;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Drawing;
 using System.ServiceModel.Channels;
 using System.Threading;
 using System.Threading.Tasks;
@@ -38,7 +39,7 @@ namespace MusicMixer
                
             });
 
-            ApplicationView.PreferredLaunchViewSize = new Size(1920, 1080);
+            ApplicationView.PreferredLaunchViewSize = new Windows.Foundation.Size(1920, 1080);
             ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.PreferredLaunchViewSize;
             InitializeComponent();
             bpmStop = false;
@@ -50,6 +51,8 @@ namespace MusicMixer
         public void CreateDynamicListItems()
         {
             ListView Musicfiles = new ListView();
+            Musicfiles.Background = new SolidColorBrush(Windows.UI.Color.FromArgb(160, 160, 160, 160));
+            
             // array for testen of het werkt 
             //String[] ll = new String[] { "wdw", "aaa", "cxc", "xzx", "plo", "qwe" };
             foreach (var musicfile in explorer.MusicList)
