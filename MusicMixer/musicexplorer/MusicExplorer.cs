@@ -21,7 +21,7 @@ namespace MusicMixer.musicexplorer
         }
 
         /// <summary>
-        /// Takes filename out of the path name
+        /// Takes filename out of the path name.
         /// </summary>
         /// <param name="path">Complete path of song</param>
         /// <returns>Filename</returns>
@@ -31,7 +31,7 @@ namespace MusicMixer.musicexplorer
         }
 
         /// <summary>
-        /// Searches for music in Windows music folder
+        /// Searches for music in Windows music folder.
         /// </summary>
         /// <returns>List of found songs</returns>
         public async Task FindNewMusic()

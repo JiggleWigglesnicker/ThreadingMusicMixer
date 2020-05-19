@@ -1,19 +1,12 @@
 ﻿using MusicMixer.metronome;
 using MusicMixer.musicexplorer;
 using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Drawing;
-using System.ServiceModel.Channels;
 using System.Threading;
 using System.Threading.Tasks;
-using Windows.Foundation;
 using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media;
-using System.Diagnostics;
-using System.Reflection;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 // This page is the mainpage for the application.

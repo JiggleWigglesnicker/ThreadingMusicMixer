@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Windows.Storage.Pickers.Provider;
 
 namespace MusicMixer.musicexplorer
 {
     class MusicFile
     {
+        /// <summary>
+        /// This class allows for the name and path of the song to be accessed.
+        /// </summary>
         public String FilePath { get; set; }
         public String FileName { get; set; }
         public MusicFile(String filepath, String filename)
@@ -18,6 +15,4 @@ namespace MusicMixer.musicexplorer
             FileName = filename;
         }
     }
-
-   
 }

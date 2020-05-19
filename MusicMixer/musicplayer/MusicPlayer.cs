@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Diagnostics;
 using System.Threading;
 using Windows.Media.Core;
 using Windows.Media.Playback;
