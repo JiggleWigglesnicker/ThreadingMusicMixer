@@ -25,7 +25,7 @@ namespace MusicMixer.musicexplorer
             ThreadPool.QueueUserWorkItem(
                 new WaitCallback(Play));
         }
-
+        
         private async void Play(Object ThreadObj)
         {
             // Check if a song is selected
@@ -42,7 +42,9 @@ namespace MusicMixer.musicexplorer
             playing = true;
         }
 
-        // Pauses or resumes the track
+        /// <summary>
+        /// Pauses or resumes the track
+        /// </summary>
         public void PauseTrack()
         {
             if (playing)
@@ -56,13 +58,17 @@ namespace MusicMixer.musicexplorer
                 playing = true;
             }
         }
-        // Change the channel of music. -1 is left 0 is middle 1 is right.
+        /// <summary>
+        /// Change the channel of music. -1 is left 0 is middle 1 is right.
+        /// </summary>
         public void ChangeChannel(int channel)
         {
             mPlayer.AudioBalance = channel;
         }
 
-        // Toggle mute between mute and unmute
+        /// <summary>
+        /// Toggle mute between mute and unmute
+        /// </summary>
         public void ToggleMute()
         {
             //mute if unmuted
@@ -77,17 +83,24 @@ namespace MusicMixer.musicexplorer
             }
         }
 
-        // Set music player to mute. True is mute false is unmute
+        /// <summary>
+        /// Set music player to mute.
+        /// </summary>
+        /// <param name="value">True is mute false is unmute</param>
         public void Mute(Boolean value)
         {
             mPlayer.IsMuted = value;
         }
-        // Lower the volume of music player
+        /// <summary>
+        /// Lower the volume of music player
+        /// </summary>
         public void VolumeDown()
         {
             mPlayer.Volume -= 0.1;
         }
-        // Higher the volume of music player
+        /// <summary>
+        /// Raise the volume of music player
+        /// </summary>
         public void VolumeUp()
         {
             mPlayer.Volume += 0.1;
