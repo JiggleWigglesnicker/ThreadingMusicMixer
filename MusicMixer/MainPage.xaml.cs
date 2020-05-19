@@ -62,11 +62,9 @@ namespace MusicMixer
             Musicfiles.IsItemClickEnabled = true;
             Musicfiles.IsEnabled = true;
 
-            //Musicfiles.ItemClick += Musicfiles_ItemClick;
             Musicfiles.Background = new SolidColorBrush(Windows.UI.Color.FromArgb(160, 160, 160, 160));
             Musicfiles.Margin = new Thickness(50.0, 50.0, 50.0, 50.0);
             // array for testen of het werkt 
-            //String[] ll = new String[] { "wdw", "aaa", "cxc", "xzx", "plo", "qwe" };
             if (explorer.MusicList.Count != 0)
             {
                 foreach (var musicfile in explorer.MusicList)
@@ -83,7 +81,6 @@ namespace MusicMixer
                     Musicfiles.Items.Add("NO MUSIC TRACKS FOUND");
                     Musicfiles.ItemClick += Musicfiles_ItemClick;
                 }
-                //Musicfiles.Items.Add("NO MUSIC TRACKS FOUND");
                 MusicItemList.Children.Add(Musicfiles);
             }
 
