@@ -1,9 +1,8 @@
 ﻿using System;
-using System.Threading;
-using System.Threading.Tasks;
-using Windows.Media.Playback;
-using Windows.Media.Core;
 using System.Diagnostics;
+using System.Threading;
+using Windows.Media.Core;
+using Windows.Media.Playback;
 
 namespace MusicMixer.musicexplorer
 {
@@ -18,17 +17,22 @@ namespace MusicMixer.musicexplorer
             playing = false;                    // set playing bool to false
         }
 
-        public async void playTrack()
+        public void playTrack()
         {
-            Debug.WriteLine("Playing Music File");
+            ThreadPool.QueueUserWorkItem(
+                new WaitCallback(play));
+        }
+
+        private async void play(Object ThreadObj)
+        {
+            Thread thread = Thread.CurrentThread;
             Windows.Storage.StorageFolder folder = await Windows.ApplicationModel.Package.Current.InstalledLocation.GetFolderAsync(@"Assets");
             Windows.Storage.StorageFile file = await folder.GetFileAsync("klaxon_beat.mp3");
 
             mPlayer.AutoPlay = false;
             mPlayer.Source = MediaSource.CreateFromStorageFile(file);
-
             mPlayer.Play();
-            
+
             playing = true;
         }
 
@@ -59,7 +63,7 @@ namespace MusicMixer.musicexplorer
             {
                 mPlayer.IsMuted = true;
             }
-            else if(mPlayer.IsMuted == true)
+            else if (mPlayer.IsMuted == true)
             {
                 mPlayer.IsMuted = false;
             }
