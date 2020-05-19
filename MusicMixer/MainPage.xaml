@@ -35,14 +35,14 @@
                 SpinButtonPlacementMode="Compact" 
                 SmallChange="1"
                 LargeChange="10" 
-                RelativePanel.Below="playBtn" RelativePanel.RightOf="" RelativePanel.AlignLeftWith="playBtn" RelativePanel.AlignRightWith="" RelativePanel.AlignRightWithPanel="True" Margin="0,0,25,0"/>
+                RelativePanel.Below="playBtn" RelativePanel.RightOf="" RelativePanel.AlignLeftWith="playBtn" RelativePanel.AlignRightWith="" Margin="30,0,25,0"/>
             <Button x:Name="playBtn"
                 Width="112"
                 Height="50"
                 Click="BpmClick"
                 Content="Start/Stop"
                 FontSize="20"
-                BorderBrush="Black" RelativePanel.RightOf="" RelativePanel.Below="metronomeBoxTitle" RelativePanel.AlignTopWith="" RelativePanel.AlignBottomWith="" RelativePanel.AlignRightWithPanel="True" Margin="0,0,25,0"
+                BorderBrush="Black" RelativePanel.RightOf="" RelativePanel.Below="metronomeBoxTitle" RelativePanel.AlignTopWith="" RelativePanel.AlignBottomWith="" Margin="30,0,25,0" RelativePanel.LeftOf="" RelativePanel.AlignLeftWith="metronomeBoxTitle" HorizontalAlignment="Left"
             />
             <TextBlock x:Name="metronomeBoxTitle" 
                        FontSize="40" 
