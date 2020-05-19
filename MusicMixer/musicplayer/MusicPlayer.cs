@@ -5,7 +5,7 @@ using Windows.Media.Playback;
 using Windows.Media.Core;
 using System.Diagnostics;
 
-namespace MusicMixer.musicplayer
+namespace MusicMixer.musicexplorer
 {
     class MusicPlayer
     {

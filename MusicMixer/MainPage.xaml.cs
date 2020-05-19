@@ -1,7 +1,9 @@
 ﻿using MusicMixer.metronome;
 using MusicMixer.musicexplorer;
-using MusicMixer.musicplayer;
+using MusicMixer.musicexplorer;
 using System;
+using System.Collections.ObjectModel;
+using System.ServiceModel.Channels;
 using System.Threading;
 using Windows.Foundation;
 using Windows.UI.ViewManagement;
@@ -21,16 +23,20 @@ namespace MusicMixer
         private Thread metroThread;
         public Boolean bpmStop;
         private MusicPlayer musicPlayer = new MusicPlayer();
-        private MusicExplorer explorer = new MusicExplorer();
+        private MusicExplorer explorer;
         private FolderExplorer folder;
 
         public MainPage()
         {
             folder = new FolderExplorer();
+            explorer = new MusicExplorer();
+            int nn = explorer.MusicList.Count;
             ApplicationView.PreferredLaunchViewSize = new Size(1920, 1080);
             ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.PreferredLaunchViewSize;
             InitializeComponent();
             bpmStop = false;
+
+            
         }
         void BpmClick(object sender, RoutedEventArgs e)
         {

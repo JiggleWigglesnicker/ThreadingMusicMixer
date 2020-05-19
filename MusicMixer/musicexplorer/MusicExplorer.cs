@@ -1,50 +1,48 @@
-﻿using MusicMixer.musicplayer;
+﻿using MusicMixer.musicexplorer;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Runtime.InteropServices.ComTypes;
+using System.Threading.Tasks;
+using Windows.Storage;
+using Windows.Storage.Search;
 
 namespace MusicMixer.musicexplorer
 {
     class MusicExplorer
     {
-        private String path;
-        //BIND Track to buttons in view
-        private HashSet<MusicFile> musicList = new HashSet<MusicFile>();
 
+        //BIND Track to buttons in view
+        public List<MusicFile> MusicList {get; set;}
         public MusicExplorer()
         {
-            path = Path.Combine(Environment.CurrentDirectory, @"MusicFolder");
-            CreateMusicFolder();
+            MusicList = new List<MusicFile>();
+            FindNewMusic();
         }
 
-        public bool CheckIfMusicFolderExist()
+        
+        public async Task FindNewMusic()
         {
-            return Directory.Exists(path);
-        }
+            QueryOptions queryOption = new QueryOptions(CommonFileQuery.OrderByTitle, new string[] { ".mp3" });
 
-        public void CreateMusicFolder()
-        {
-            if (!CheckIfMusicFolderExist())
+            queryOption.FolderDepth = FolderDepth.Deep;
+
+            Queue<IStorageFolder> folders = new Queue<IStorageFolder>();
+
+            
+            var files = await KnownFolders.MusicLibrary.CreateFileQueryWithOptions
+                (queryOption).GetFilesAsync();
+
+            Console.WriteLine(files.Count);
+
+            foreach (var musictrack in files)
             {
-             //   Directory.CreateDirectory(path);
-            }
-            else
-            {
-                Console.WriteLine("Musicfolder already exist");
+                MusicFile musicfile = new MusicFile(musictrack.Path);
+                MusicList.Add(musicfile);
+                
             }
 
-        }
-
-        // moet MULTITHREADED
-        public void FindNewMusic()
-        {
-            foreach (String musictrack in Directory.GetFiles(path))
-            {
-                MusicFile musicFile = new MusicFile(musictrack);
-                musicList.Add(musicFile);
-
-            }
+            int n1 = MusicList.Count;
         }
 
     }

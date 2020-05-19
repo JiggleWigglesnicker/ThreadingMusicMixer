@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MusicMixer.musicplayer
+namespace MusicMixer.musicexplorer
 {
     class MusicFile
     {
@@ -16,4 +16,6 @@ namespace MusicMixer.musicplayer
             FilePath = filepath;
         }
     }
+
+   
 }

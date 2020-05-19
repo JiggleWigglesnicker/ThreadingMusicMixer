@@ -14,7 +14,8 @@ namespace MusicMixer.musicexplorer
 
         public FolderExplorer()
         {
-            getFolderAsync();
+            //getFolderAsync();
+
         }
         private async Task getFolderAsync()
         {

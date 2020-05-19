@@ -55,13 +55,17 @@
                        />
 
 
-
+           
         </RelativePanel>
 
         <ScrollViewer Background="LightSteelBlue">
 
-            <ListView  Margin="30" Background="CornflowerBlue" Grid.Row="0" Grid.Column="0" SelectionChanged="ListView_SelectionChanged">
-                <TextBlock x:Name="Foldername" Text="FolderName" TextWrapping="Wrap"/>
+            <ListView  
+                Margin="30" 
+                Background="CornflowerBlue" 
+                Grid.Row="0" Grid.Column="0" 
+                SelectionChanged="ListView_SelectionChanged">
+                
             </ListView>
 
         </ScrollViewer>
@@ -128,7 +132,7 @@
                 FontSize="20"
                 RelativePanel.RightOf="leftChannel1" Click="MiddleChannel1_click" RelativePanel.Below="pz1" Margin="25,25,0,0"
                 />
-                
+
                 <Button x:Name="RightChannel1"
                 Height="50"
                 Content="Right channel"
@@ -141,7 +145,7 @@
             </RelativePanel>
 
             <RelativePanel Grid.Column="1" Grid.Row="0" Background="LightSteelBlue">
-                
+
 
             </RelativePanel>
 
