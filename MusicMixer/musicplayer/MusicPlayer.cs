@@ -77,7 +77,5 @@ namespace MusicMixer.musicexplorer
         {
             mPlayer.IsMuted = value;
         }
-
-        
     }
 }
