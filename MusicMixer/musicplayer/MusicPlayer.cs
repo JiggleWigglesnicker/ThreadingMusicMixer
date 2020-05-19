@@ -86,7 +86,7 @@ namespace MusicMixer.musicexplorer
         {
             mPlayer.Volume -= 0.1;
         }
-        // Higher the volume of music player
+        // Raise the volume of music player
         public void VolumeUp()
         {
             mPlayer.Volume += 0.1;
