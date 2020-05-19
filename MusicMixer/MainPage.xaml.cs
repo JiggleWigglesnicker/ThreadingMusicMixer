@@ -26,12 +26,10 @@ namespace MusicMixer
     {
         private Thread metroThread;
         public Boolean bpmStop;
-<<<<<<< HEAD
-        private MusicPlayer musicPlayer1 = new MusicPlayer();
-=======
+
+
         private String musicLibraryPath;
-        private MusicPlayer musicPlayer = new MusicPlayer();
->>>>>>> 961ec9b09be4f9be1931f2c9c00d4e4e6f748d0b
+        private MusicPlayer musicPlayer1 = new MusicPlayer();
         private MusicPlayer musicPlayer2 = new MusicPlayer();
         private MusicExplorer explorer;
 
@@ -127,11 +125,8 @@ namespace MusicMixer
         // Music Player 1
         private void Ply1_Click(object sender, RoutedEventArgs e)
         {
-<<<<<<< HEAD
-             musicPlayer1.playTrack();
-=======
-             musicPlayer.playTrack(musicLibraryPath);
->>>>>>> 961ec9b09be4f9be1931f2c9c00d4e4e6f748d0b
+             musicPlayer1.playTrack(musicLibraryPath);
+
         }
 
         private void Pz1_Click(object sender, RoutedEventArgs e)
