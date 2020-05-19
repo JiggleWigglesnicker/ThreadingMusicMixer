@@ -179,16 +179,6 @@ namespace MusicMixer
         {
             musicPlayer2.ToggleMute();
         }
-
-        private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
-
-        private void MetronomeBoxTitle_SelectionChanged(object sender, RoutedEventArgs e)
-        {
-
-        }
         // Mute all music players
         private void MuteAll_Click(object sender, RoutedEventArgs e)
         {
