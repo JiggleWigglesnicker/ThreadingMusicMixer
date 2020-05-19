@@ -97,7 +97,7 @@
                 Width="150"
                 Height="50"
                 Background="OrangeRed"
-                Content="Pauze"
+                Content="Pause"
                 FontSize="20"
                 RelativePanel.RightOf="ply1" Click="Pz1_Click" RelativePanel.Below="musicPlayer1Title" Margin="25,0,0,0"
                 />
