@@ -19,9 +19,9 @@ namespace MusicMixer.musicexplorer
             playing = false;                    // set playing bool to false
         }
 
-        public void PlayTrack(String mp3File)
+        public void PlayTrack(String musicFile)
         {
-            currentMusic = mp3File;
+            currentMusic = musicFile;
             ThreadPool.QueueUserWorkItem(
                 new WaitCallback(Play));
         }
