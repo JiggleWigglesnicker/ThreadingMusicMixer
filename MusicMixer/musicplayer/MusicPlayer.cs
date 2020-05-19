@@ -19,14 +19,14 @@ namespace MusicMixer.musicexplorer
             playing = false;                    // set playing bool to false
         }
 
-        public void playTrack(String mp3File)
+        public void PlayTrack(String mp3File)
         {
             currentMusic = mp3File;
             ThreadPool.QueueUserWorkItem(
-                new WaitCallback(play));
+                new WaitCallback(Play));
         }
 
-        private async void play(Object ThreadObj)
+        private async void Play(Object ThreadObj)
         {
             Thread thread = Thread.CurrentThread;
             Windows.Storage.StorageFile file = await StorageFile.GetFileFromPathAsync(currentMusic);
@@ -45,13 +45,11 @@ namespace MusicMixer.musicexplorer
             {
                 mPlayer.Pause();
                 playing = false;
-                Debug.WriteLine("pausing {0}", playing);
             }
             else
             {
                 mPlayer.Play();
                 playing = true;
-                Debug.WriteLine("resuming {0}", playing);
             }
         }
         // Change the channel of music. -1 is left 0 is middle 1 is right.
