@@ -149,8 +149,6 @@ namespace MusicMixer
             musicPlayer1.ToggleMute();
         }
 
-
-
         // Music Player 2
         private void Ply2_Click(object sender, RoutedEventArgs e)
         {
@@ -193,7 +191,6 @@ namespace MusicMixer
             musicPlayer1.Mute(false);
             musicPlayer2.Mute(false);
         }
-
         private void VolumeDown1_click(object sender, RoutedEventArgs e)
         {
             musicPlayer1.VolumeDown();

@@ -5,10 +5,11 @@ namespace MusicMixer.metronome
 {
     class Metronome
     {
-        /**
-         * Converts the specified bpm to time between beats in miliseconds
-         * @Returns float
-         */
+        /// <summary>
+        /// Converts the specified bpm to time between beats in miliseconds
+        /// </summary>
+        /// <param name="bpm"></param>
+        /// <returns></returns>
         private float BpmToMiliSeconds(double bpm)
         {
             //Seconds in a minute
@@ -18,12 +19,15 @@ namespace MusicMixer.metronome
             //Returns time between beats in miliseconds
             return ((minute / bpm1) * 1000);
         }
-        /**
-         * Plays the beep sound
-         */
+
+        /// <summary>
+        /// Plays the beep sound
+        /// </summary>
+        /// <param name="bpm"></param>
+        /// <param name="main"></param>
         public void Beep(double bpm, MainPage main)
         {
-            //setts the bpmstop boolean to false
+            //sets the bpmstop boolean to false
             main.SetBpmStop();
             //converts the given bpm to miliseconds for the intervals
             int intBpm = Convert.ToInt32(BpmToMiliSeconds(bpm));
