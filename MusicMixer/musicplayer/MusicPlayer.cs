@@ -19,14 +19,14 @@ namespace MusicMixer.musicexplorer
             playing = false;                    // set playing bool to false
         }
 
-        public void playTrack(String mp3File)
+        public void PlayTrack(String mp3File)
         {
             currentMusic = mp3File;
             ThreadPool.QueueUserWorkItem(
-                new WaitCallback(play));
+                new WaitCallback(Play));
         }
 
-        private async void play(Object ThreadObj)
+        private async void Play(Object ThreadObj)
         {
             Thread thread = Thread.CurrentThread;
             Windows.Storage.StorageFile file = await StorageFile.GetFileFromPathAsync(currentMusic);

@@ -118,7 +118,7 @@ namespace MusicMixer
         //Play track button
         private void Play1_Click(object sender, RoutedEventArgs e)
         {
-             musicPlayer1.playTrack(musicLibraryPath);
+             musicPlayer1.PlayTrack(musicLibraryPath);
 
         }
         // Pause or resume track button
@@ -152,7 +152,7 @@ namespace MusicMixer
         // Music Player 2
         private void Ply2_Click(object sender, RoutedEventArgs e)
         {
-            musicPlayer2.playTrack(musicLibraryPath);
+            musicPlayer2.PlayTrack(musicLibraryPath);
         }
         // Pause or resume track button
         private void Pz2_Click(object sender, RoutedEventArgs e)
