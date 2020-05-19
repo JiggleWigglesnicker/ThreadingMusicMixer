@@ -32,10 +32,11 @@ namespace MusicMixer
 
         public MainPage()
         {
+
             explorer = new MusicExplorer();
             Task findMusic = new Task(async () =>
             {
-                Debug.WriteLine("test");
+
                 await explorer.FindNewMusic();
                 //moet wachten tot task is uitgevoerd boven. anders null
                 CreateDynamicListItems();
@@ -48,21 +49,48 @@ namespace MusicMixer
             ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.PreferredLaunchViewSize;
             InitializeComponent();
             bpmStop = false;
-            
+
         }
 
         public void CreateDynamicListItems()
         {
             ListView Musicfiles = new ListView();
+            Musicfiles.IsItemClickEnabled = true;
+            Musicfiles.IsEnabled = true;
+
+            //Musicfiles.ItemClick += Musicfiles_ItemClick;
             Musicfiles.Background = new SolidColorBrush(Windows.UI.Color.FromArgb(160, 160, 160, 160));
-            
+            Musicfiles.Margin = new Thickness(50.0, 50.0, 50.0, 50.0);
             // array for testen of het werkt 
             //String[] ll = new String[] { "wdw", "aaa", "cxc", "xzx", "plo", "qwe" };
-            foreach (var musicfile in explorer.MusicList)
+            if (explorer.MusicList.Count != 0)
             {
-                Musicfiles.Items.Add(musicfile);
+                foreach (var musicfile in explorer.MusicList)
+                {
+                    Musicfiles.Items.Add(musicfile);
+                }
+                MusicItemList.Children.Add(Musicfiles);
             }
-            MusicItemList.Children.Add(Musicfiles);
+            else
+            {
+                for (int x = 0; x <= 20; x++)
+                {
+                    Musicfiles.Items.Add("NO MUSIC TRACKS FOUND");
+                    Musicfiles.ItemClick += Musicfiles_ItemClick;
+                }
+                //Musicfiles.Items.Add("NO MUSIC TRACKS FOUND");
+                MusicItemList.Children.Add(Musicfiles);
+            }
+
+        }
+
+        private void Musicfiles_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            e.ClickedItem.ToString();
+            Debug.WriteLine("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+            Debug.WriteLine(e.ClickedItem.ToString());
+            Debug.WriteLine("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+
         }
 
         void BpmClick(object sender, RoutedEventArgs e)
