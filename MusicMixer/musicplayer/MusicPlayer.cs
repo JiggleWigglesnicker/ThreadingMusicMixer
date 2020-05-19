@@ -38,6 +38,7 @@ namespace MusicMixer.musicexplorer
             playing = true;
         }
 
+        // Pauses or resumes the track
         public void PauseTrack()
         {
             if (playing)
@@ -59,19 +60,22 @@ namespace MusicMixer.musicexplorer
             mPlayer.AudioBalance = channel;
         }
 
+        // Toggle mute between mute and unmute
         public void ToggleMute()
         {
+            //mute if unmuted
             if (mPlayer.IsMuted == false)
             {
                 mPlayer.IsMuted = true;
             }
+            //unmute if muted
             else if (mPlayer.IsMuted == true)
             {
                 mPlayer.IsMuted = false;
             }
         }
 
-        // set music player to mute. True is mute false is unmute
+        // Set music player to mute. True is mute false is unmute
         public void Mute(Boolean value)
         {
             mPlayer.IsMuted = value;
