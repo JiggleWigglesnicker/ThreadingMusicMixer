@@ -66,7 +66,7 @@ namespace MusicMixer
 
         private void Pz1_Click(object sender, RoutedEventArgs e)
         {
-            musicPlayer.pauzeTrack();
+            musicPlayer.pauseTrack();
         }
 
         private void stp1_Click(object sender, RoutedEventArgs e)
