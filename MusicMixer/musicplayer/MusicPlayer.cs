@@ -32,10 +32,20 @@ namespace MusicMixer.musicexplorer
             playing = true;
         }
 
-        public void pauzeTrack()
+        public void pauseTrack()
         {
-            mPlayer.Pause();
-
+            if (playing)
+            {
+                mPlayer.Pause();
+                playing = false;
+                Debug.WriteLine("pausing {0}", playing);
+            }
+            else
+            {
+                mPlayer.Play();
+                playing = true;
+                Debug.WriteLine("resuming {0}", playing);
+            }
         }
 
         public void changeChannel(int channel)
