@@ -36,7 +36,7 @@ namespace MusicMixer.musicexplorer
             playing = true;
         }
 
-        public void pauseTrack()
+        public void PauseTrack()
         {
             if (playing)
             {
@@ -51,13 +51,13 @@ namespace MusicMixer.musicexplorer
                 Debug.WriteLine("resuming {0}", playing);
             }
         }
-
-        public void changeChannel(int channel)
+        // Change the channel of music. -1 is left 0 is middle 1 is right.
+        public void ChangeChannel(int channel)
         {
             mPlayer.AudioBalance = channel;
         }
 
-        public void toggleMute()
+        public void ToggleMute()
         {
             if (mPlayer.IsMuted == false)
             {
@@ -68,5 +68,13 @@ namespace MusicMixer.musicexplorer
                 mPlayer.IsMuted = false;
             }
         }
+
+        // set music player to mute. True is mute false is unmute
+        public void Mute(Boolean value)
+        {
+            mPlayer.IsMuted = value;
+        }
+
+        
     }
 }
