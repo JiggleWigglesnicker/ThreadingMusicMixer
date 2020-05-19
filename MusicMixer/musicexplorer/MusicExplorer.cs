@@ -28,9 +28,10 @@ namespace MusicMixer.musicexplorer
 
         public async Task FindNewMusic()
         {
-            QueryOptions queryOption = new QueryOptions(CommonFileQuery.OrderByTitle, fileTypeFilter);
-
-            queryOption.FolderDepth = FolderDepth.Deep;
+            QueryOptions queryOption = new QueryOptions(CommonFileQuery.OrderByTitle, fileTypeFilter)
+            {
+                FolderDepth = FolderDepth.Deep
+            };
 
             Queue<IStorageFolder> folders = new Queue<IStorageFolder>();
 

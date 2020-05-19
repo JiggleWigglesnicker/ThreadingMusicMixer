@@ -58,12 +58,14 @@ namespace MusicMixer
 
         public void CreateDynamicListItems()
         {
-            ListView Musicfiles = new ListView();
-            Musicfiles.IsItemClickEnabled = true;
-            Musicfiles.IsEnabled = true;
+            ListView Musicfiles = new ListView
+            {
+                IsItemClickEnabled = true,
+                IsEnabled = true,
 
-            Musicfiles.Background = new SolidColorBrush(Windows.UI.Color.FromArgb(160, 160, 160, 160));
-            Musicfiles.Margin = new Thickness(50.0, 50.0, 50.0, 50.0);
+                Background = new SolidColorBrush(Windows.UI.Color.FromArgb(160, 160, 160, 160)),
+                Margin = new Thickness(50.0, 50.0, 50.0, 50.0)
+            };
             // array for testen of het werkt 
             if (explorer.MusicList.Count != 0)
             {
