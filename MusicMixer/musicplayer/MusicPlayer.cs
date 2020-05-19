@@ -21,18 +21,19 @@ namespace MusicMixer.musicexplorer
 
         public void PlayTrack(String musicFile)
         {
-            currentMusic = musicFile;
+            currentMusic = musicFile; // path and filename of music file to be played
             ThreadPool.QueueUserWorkItem(
                 new WaitCallback(Play));
         }
 
         private async void Play(Object ThreadObj)
         {
+            // Check if a song is selected
             if(currentMusic == null)
             {
-                return;
+                return; 
             }
-            Windows.Storage.StorageFile file = await StorageFile.GetFileFromPathAsync(currentMusic);
+            Windows.Storage.StorageFile file = await StorageFile.GetFileFromPathAsync(currentMusic); // Select Windows Music folder as selected folder
 
             mPlayer.AutoPlay = false;
             mPlayer.Source = MediaSource.CreateFromStorageFile(file);
