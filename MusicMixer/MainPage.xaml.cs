@@ -90,9 +90,9 @@ namespace MusicMixer
         {
 
             String musicLibraryPath = Windows.Storage.KnownFolders.MusicLibrary.Path + e.ClickedItem.ToString();
-            Debug.WriteLine("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+            Debug.WriteLine("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
             Debug.WriteLine(musicLibraryPath);
-            Debug.WriteLine("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+            Debug.WriteLine("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
 
         }
 
