@@ -1,6 +1,5 @@
 ﻿using MusicMixer.metronome;
 using MusicMixer.musicexplorer;
-using MusicMixer.musicexplorer;
 using System;
 using System.Collections.ObjectModel;
 using System.ServiceModel.Channels;
