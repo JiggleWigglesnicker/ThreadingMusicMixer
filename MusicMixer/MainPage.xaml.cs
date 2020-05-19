@@ -13,6 +13,7 @@ using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media;
 using System.Diagnostics;
+using System.Reflection;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 // This page is the mainpage for the application.
@@ -66,7 +67,8 @@ namespace MusicMixer
             {
                 foreach (var musicfile in explorer.MusicList)
                 {
-                    Musicfiles.Items.Add(musicfile);
+                    Musicfiles.Items.Add(musicfile.FileName);
+                    Musicfiles.ItemClick += Musicfiles_ItemClick;
                 }
                 MusicItemList.Children.Add(Musicfiles);
             }
@@ -85,9 +87,10 @@ namespace MusicMixer
 
         private void Musicfiles_ItemClick(object sender, ItemClickEventArgs e)
         {
-            e.ClickedItem.ToString();
+
+            String musicLibraryPath = Windows.Storage.KnownFolders.MusicLibrary.Path + e.ClickedItem.ToString();
             Debug.WriteLine("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
-            Debug.WriteLine(e.ClickedItem.ToString());
+            Debug.WriteLine(musicLibraryPath);
             Debug.WriteLine("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
 
         }
