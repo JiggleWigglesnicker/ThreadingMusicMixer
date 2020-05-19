@@ -3,6 +3,7 @@ using System.Diagnostics;
 using System.Threading;
 using Windows.Media.Core;
 using Windows.Media.Playback;
+using Windows.Storage;
 
 namespace MusicMixer.musicexplorer
 {
@@ -10,6 +11,7 @@ namespace MusicMixer.musicexplorer
     {
         MediaPlayer mPlayer;
         bool playing;
+        String currentMusic;
 
         public MusicPlayer()
         {
@@ -17,8 +19,9 @@ namespace MusicMixer.musicexplorer
             playing = false;                    // set playing bool to false
         }
 
-        public void playTrack()
+        public void playTrack(String mp3File)
         {
+            currentMusic = mp3File;
             ThreadPool.QueueUserWorkItem(
                 new WaitCallback(play));
         }
@@ -26,8 +29,7 @@ namespace MusicMixer.musicexplorer
         private async void play(Object ThreadObj)
         {
             Thread thread = Thread.CurrentThread;
-            Windows.Storage.StorageFolder folder = await Windows.ApplicationModel.Package.Current.InstalledLocation.GetFolderAsync(@"Assets");
-            Windows.Storage.StorageFile file = await folder.GetFileAsync("klaxon_beat.mp3");
+            Windows.Storage.StorageFile file = await StorageFile.GetFileFromPathAsync(currentMusic);
 
             mPlayer.AutoPlay = false;
             mPlayer.Source = MediaSource.CreateFromStorageFile(file);

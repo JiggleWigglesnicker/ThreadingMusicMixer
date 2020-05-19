@@ -26,6 +26,7 @@ namespace MusicMixer
     {
         private Thread metroThread;
         public Boolean bpmStop;
+        private String musicLibraryPath;
         private MusicPlayer musicPlayer = new MusicPlayer();
         private MusicPlayer musicPlayer2 = new MusicPlayer();
         private MusicExplorer explorer;
@@ -89,7 +90,7 @@ namespace MusicMixer
         private void Musicfiles_ItemClick(object sender, ItemClickEventArgs e)
         {
 
-            String musicLibraryPath = Windows.Storage.KnownFolders.MusicLibrary.Path + e.ClickedItem.ToString();
+            musicLibraryPath = Windows.Storage.KnownFolders.MusicLibrary.Path + e.ClickedItem.ToString();
             Debug.WriteLine("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
             Debug.WriteLine(musicLibraryPath);
             Debug.WriteLine("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
@@ -122,7 +123,7 @@ namespace MusicMixer
         // Music Player 1
         private void Ply1_Click(object sender, RoutedEventArgs e)
         {
-             musicPlayer.playTrack();
+             musicPlayer.playTrack(musicLibraryPath);
         }
 
         private void Pz1_Click(object sender, RoutedEventArgs e)
@@ -160,7 +161,7 @@ namespace MusicMixer
         // Music Player 2
         private void Ply2_Click(object sender, RoutedEventArgs e)
         {
-            musicPlayer2.playTrack();
+            musicPlayer2.playTrack(musicLibraryPath);
         }
 
         private void Pz2_Click(object sender, RoutedEventArgs e)
