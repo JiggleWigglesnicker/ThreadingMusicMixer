@@ -123,7 +123,6 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="metronome\Metronome.cs" />
-    <Compile Include="musicexplorer\FolderExplorer.cs" />
     <Compile Include="musicexplorer\MusicExplorer.cs" />
     <Compile Include="musicexplorer\MusicFile.cs" />
     <Compile Include="musicplayer\MusicPlayer.cs" />

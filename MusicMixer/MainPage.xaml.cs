@@ -26,12 +26,10 @@ namespace MusicMixer
         public Boolean bpmStop;
         private MusicPlayer musicPlayer = new MusicPlayer();
         private MusicExplorer explorer;
-        private FolderExplorer folder;
 
 
         public MainPage()
         {
-            folder = new FolderExplorer();
             explorer = new MusicExplorer();
             Task findMusic = new Task(async () =>
             {
