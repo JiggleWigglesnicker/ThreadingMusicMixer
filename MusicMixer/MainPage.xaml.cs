@@ -91,12 +91,7 @@ namespace MusicMixer
 
         private void Musicfiles_ItemClick(object sender, ItemClickEventArgs e)
         {
-
             musicLibraryPath = Windows.Storage.KnownFolders.MusicLibrary.Path + e.ClickedItem.ToString();
-            Debug.WriteLine("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
-            Debug.WriteLine(musicLibraryPath);
-            Debug.WriteLine("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
-
         }
 
         void BpmClick(object sender, RoutedEventArgs e)
