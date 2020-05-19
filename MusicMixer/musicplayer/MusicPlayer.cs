@@ -45,13 +45,11 @@ namespace MusicMixer.musicexplorer
             {
                 mPlayer.Pause();
                 playing = false;
-                Debug.WriteLine("pausing {0}", playing);
             }
             else
             {
                 mPlayer.Play();
                 playing = true;
-                Debug.WriteLine("resuming {0}", playing);
             }
         }
         // Change the channel of music. -1 is left 0 is middle 1 is right.
