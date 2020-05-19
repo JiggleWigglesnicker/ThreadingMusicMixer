@@ -26,8 +26,10 @@ namespace MusicMixer
     {
         private Thread metroThread;
         public Boolean bpmStop;
+
+
         private String musicLibraryPath;
-        private MusicPlayer musicPlayer = new MusicPlayer();
+        private MusicPlayer musicPlayer1 = new MusicPlayer();
         private MusicPlayer musicPlayer2 = new MusicPlayer();
         private MusicExplorer explorer;
 
@@ -123,37 +125,34 @@ namespace MusicMixer
         // Music Player 1
         private void Ply1_Click(object sender, RoutedEventArgs e)
         {
-             musicPlayer.playTrack(musicLibraryPath);
+             musicPlayer1.playTrack(musicLibraryPath);
+
         }
 
         private void Pz1_Click(object sender, RoutedEventArgs e)
         {
-            musicPlayer.pauseTrack();
+            musicPlayer1.PauseTrack();
         }
 
-        private void stp1_Click(object sender, RoutedEventArgs e)
-        {
-            //musicPlayer.stopTrack();
-        }
 
         private void LeftChannel1_click(object sender, RoutedEventArgs e)
         {
-            musicPlayer.changeChannel(-1);
+            musicPlayer1.ChangeChannel(-1);
         }
 
         private void MiddleChannel1_click(object sender, RoutedEventArgs e)
         {
-            musicPlayer.changeChannel(0);
+            musicPlayer1.ChangeChannel(0);
         }
 
         private void RightChannel1_click(object sender, RoutedEventArgs e)
         {
-            musicPlayer.changeChannel(+1);
+            musicPlayer1.ChangeChannel(+1);
         }
 
         private void ToggleMute1_click(object sender, RoutedEventArgs e)
         {
-            musicPlayer.toggleMute();
+            musicPlayer1.ToggleMute();
         }
 
 
@@ -166,32 +165,27 @@ namespace MusicMixer
 
         private void Pz2_Click(object sender, RoutedEventArgs e)
         {
-            musicPlayer2.pauseTrack();
-        }
-
-        private void stp2_Click(object sender, RoutedEventArgs e)
-        {
-            //musicPlayer2.stopTrack();
+            musicPlayer2.PauseTrack();
         }
 
         private void LeftChannel2_click(object sender, RoutedEventArgs e)
         {
-            musicPlayer2.changeChannel(-1);
+            musicPlayer2.ChangeChannel(-1);
         }
 
         private void MiddleChannel2_click(object sender, RoutedEventArgs e)
         {
-            musicPlayer2.changeChannel(0);
+            musicPlayer2.ChangeChannel(0);
         }
 
         private void RightChannel2_click(object sender, RoutedEventArgs e)
         {
-            musicPlayer2.changeChannel(+1);
+            musicPlayer2.ChangeChannel(+1);
         }
 
         private void ToggleMute2_click(object sender, RoutedEventArgs e)
         {
-            musicPlayer2.toggleMute();
+            musicPlayer2.ToggleMute();
         }
 
         private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -202,6 +196,18 @@ namespace MusicMixer
         private void MetronomeBoxTitle_SelectionChanged(object sender, RoutedEventArgs e)
         {
 
+        }
+        
+        private void MuteAll_Click(object sender, RoutedEventArgs e)
+        {
+            musicPlayer1.Mute(true);
+            musicPlayer2.Mute(true);
+        }
+
+        private void UnmuteAll_Click(object sender, RoutedEventArgs e)
+        {
+            musicPlayer1.Mute(false);
+            musicPlayer2.Mute(false);
         }
     }
 }
