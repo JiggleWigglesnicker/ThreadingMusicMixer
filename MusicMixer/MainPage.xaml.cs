@@ -81,7 +81,6 @@ namespace MusicMixer
                     Musicfiles.Items.Add("NO MUSIC TRACKS FOUND");
                     Musicfiles.ItemClick += Musicfiles_ItemClick;
                 }
-                //Musicfiles.Items.Add("NO MUSIC TRACKS FOUND");
                 MusicItemList.Children.Add(Musicfiles);
             }
 
