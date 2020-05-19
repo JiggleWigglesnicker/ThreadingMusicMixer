@@ -5,8 +5,6 @@ namespace MusicMixer.metronome
 {
     class Metronome
     {
-        private double bpm;
-
         /**
          * Converts the specified bpm to time between beats in miliseconds
          * @Returns float
