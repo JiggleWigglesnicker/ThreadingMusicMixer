@@ -1,13 +1,8 @@
-﻿using MusicMixer.musicexplorer;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.IO;
-using System.Runtime.InteropServices.ComTypes;
 using System.Threading.Tasks;
 using Windows.Storage;
 using Windows.Storage.Search;
-using System.Diagnostics;
-using Windows.ApplicationModel.Store.Preview.InstallControl;
 
 namespace MusicMixer.musicexplorer
 {
@@ -22,6 +17,7 @@ namespace MusicMixer.musicexplorer
             MusicList = new List<MusicFile>();
             fileTypeFilter.Add(".mp3");
             fileTypeFilter.Add(".m4a");
+            fileTypeFilter.Add(".flac");
         }
 
         public String RetrieveMusicNameFromPath(String path)
