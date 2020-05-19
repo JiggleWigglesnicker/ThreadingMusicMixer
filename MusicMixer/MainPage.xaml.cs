@@ -192,13 +192,13 @@ namespace MusicMixer
         {
 
         }
-        
+        // Mute all music players
         private void MuteAll_Click(object sender, RoutedEventArgs e)
         {
             musicPlayer1.Mute(true);
             musicPlayer2.Mute(true);
         }
-
+        // Unmute all music players
         private void UnmuteAll_Click(object sender, RoutedEventArgs e)
         {
             musicPlayer1.Mute(false);
