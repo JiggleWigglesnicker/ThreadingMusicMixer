@@ -21,6 +21,7 @@
             <RowDefinition Height="*"/>
 
         </Grid.RowDefinitions>
+        
 
         <RelativePanel Background="LightSteelBlue" Grid.Row="1" Grid.Column="0">
 
@@ -138,6 +139,66 @@
             </RelativePanel>
 
             <RelativePanel Grid.Column="1" Grid.Row="0" Background="LightSteelBlue">
+
+                <TextBlock x:Name="musicPlayer2Title" 
+                       FontSize="40" 
+                       Text="Music Player 2" 
+                       TextWrapping="Wrap" 
+                       SelectionChanged="MetronomeBoxTitle_SelectionChanged" 
+                       RelativePanel.Above="" 
+                       RelativePanel.Below="" 
+                       RelativePanel.AlignLeftWithPanel="True" 
+                       Margin="25,0,0,0"
+                />
+
+                <Button x:Name="ply2"
+                Width="150"
+                Height="50"
+                Background="Green"
+                Content="Play"
+                FontSize="20" Click="Ply2_Click" RelativePanel.Below="musicPlayer2Title" Margin="25,0,0,0"
+                />
+
+                <Button x:Name="pz2"
+                Width="150"
+                Height="50"
+                Background="OrangeRed"
+                Content="Pause"
+                FontSize="20"
+                RelativePanel.RightOf="ply2" Click="Pz2_Click" RelativePanel.Below="musicPlayer2Title" Margin="25,0,0,0"
+                />
+
+
+                <Button x:Name="toggleMute2"
+                Width="150"
+                Height="50"
+                Content="(un)mute"
+                FontSize="20"
+                RelativePanel.RightOf="pz2" Click="ToggleMute_click" RelativePanel.Below="musicPlayer2Title" Margin="25,0,0,0"
+                />
+
+
+                <Button x:Name="leftChannel2"
+                Width="150"
+                Height="50"
+                Content="Left Channel"
+                FontSize="20"
+                RelativePanel.RightOf="" Click="LeftChannel2_click" RelativePanel.Below="pz2" Margin="25,25,0,0"
+                />
+
+                <Button x:Name="MiddleChannel2"
+                Height="50"
+                Content="Middle channel" 
+                FontSize="20"
+                RelativePanel.RightOf="leftChannel2" Click="MiddleChannel2_click" RelativePanel.Below="pz2" Margin="25,25,0,0"
+                />
+
+                <Button x:Name="RightChannel2"
+                Height="50"
+                Content="Right channel"
+                FontSize="20"
+                RelativePanel.RightOf="MiddleChannel2" Click="RightChannel2_click" RelativePanel.Below="pz2" Margin="25,25,0,0"
+                />
 
 
             </RelativePanel>
