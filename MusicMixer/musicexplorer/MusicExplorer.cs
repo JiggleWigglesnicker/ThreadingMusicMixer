@@ -6,6 +6,7 @@ using System.Runtime.InteropServices.ComTypes;
 using System.Threading.Tasks;
 using Windows.Storage;
 using Windows.Storage.Search;
+using System.Diagnostics;
 
 namespace MusicMixer.musicexplorer
 {
@@ -17,7 +18,6 @@ namespace MusicMixer.musicexplorer
         public MusicExplorer()
         {
             MusicList = new List<MusicFile>();
-            FindNewMusic();
         }
 
         
@@ -33,7 +33,6 @@ namespace MusicMixer.musicexplorer
             var files = await KnownFolders.MusicLibrary.CreateFileQueryWithOptions
                 (queryOption).GetFilesAsync();
 
-            Console.WriteLine(files.Count);
 
             foreach (var musictrack in files)
             {
