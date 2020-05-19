@@ -132,7 +132,7 @@
                 RelativePanel.RightOf="MiddleChannel1" Click="RightChannel1_click" RelativePanel.Below="pz1" Margin="25,25,0,0"
                 />
                 
-                <Button x:Name="volumeDown"
+                <Button x:Name="volumeDown1"
                 Width="150"
                 Height="50"
                 Content="Volume Down"
@@ -140,12 +140,12 @@
                 RelativePanel.RightOf="" Click="VolumeDown1_click" RelativePanel.Below="leftChannel1" Margin="25,25,0,0"
                 />
                 
-                <Button x:Name="volumeUp"
+                <Button x:Name="volumeUp1"
                 Width="150"
                 Height="50"
                 Content="Volume Up"
                 FontSize="20"
-                RelativePanel.RightOf="volumeDown" Click="VolumeUp1_click" RelativePanel.Below="MiddleChannel1" Margin="25,25,0,0"
+                RelativePanel.RightOf="volumeDown1" Click="VolumeUp1_click" RelativePanel.Below="MiddleChannel1" Margin="25,25,0,0"
                 />
 
 
@@ -212,6 +212,23 @@
                 FontSize="20"
                 RelativePanel.RightOf="MiddleChannel2" Click="RightChannel2_click" RelativePanel.Below="pz2" Margin="25,25,0,0"
                 />
+
+                <Button x:Name="volumeDown2"
+                Width="150"
+                Height="50"
+                Content="Volume Down"
+                FontSize="20"
+                RelativePanel.RightOf="" Click="VolumeDown2_click" RelativePanel.Below="leftChannel2" Margin="25,25,0,0"
+                />
+
+                <Button x:Name="volumeUp2"
+                Width="150"
+                Height="50"
+                Content="Volume Up"
+                FontSize="20"
+                RelativePanel.RightOf="volumeDown2" Click="VolumeUp2_click" RelativePanel.Below="MiddleChannel2" Margin="25,25,0,0"
+                />
+
 
                 <Button x:Name="MuteAll" Content="Mute all" 
                     Margin="52,30,0,25" 

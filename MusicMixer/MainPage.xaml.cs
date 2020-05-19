@@ -202,6 +202,14 @@ namespace MusicMixer
         {
             musicPlayer1.VolumeUp();
         }
+        private void VolumeDown2_click(object sender, RoutedEventArgs e)
+        {
+            musicPlayer2.VolumeDown();
+        }
+        private void VolumeUp2_click(object sender, RoutedEventArgs e)
+        {
+            musicPlayer2.VolumeUp();
+        }
 
     }
 }
