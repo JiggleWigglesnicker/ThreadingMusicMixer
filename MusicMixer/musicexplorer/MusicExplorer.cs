@@ -16,9 +16,12 @@ namespace MusicMixer.musicexplorer
 
         //BIND Track to buttons in view
         public List<MusicFile> MusicList { get; set; }
+        List<string> fileTypeFilter = new List<string>();
         public MusicExplorer()
         {
             MusicList = new List<MusicFile>();
+            fileTypeFilter.Add(".mp3");
+            fileTypeFilter.Add(".m4a");
         }
 
         public String RetrieveMusicNameFromPath(String path)
@@ -29,7 +32,7 @@ namespace MusicMixer.musicexplorer
 
         public async Task FindNewMusic()
         {
-            QueryOptions queryOption = new QueryOptions(CommonFileQuery.OrderByTitle, new string[] { ".mp3" });
+            QueryOptions queryOption = new QueryOptions(CommonFileQuery.OrderByTitle, fileTypeFilter);
 
             queryOption.FolderDepth = FolderDepth.Deep;
 
