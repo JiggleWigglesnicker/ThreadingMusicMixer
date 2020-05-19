@@ -62,7 +62,6 @@ namespace MusicMixer
             Musicfiles.IsItemClickEnabled = true;
             Musicfiles.IsEnabled = true;
 
-            //Musicfiles.ItemClick += Musicfiles_ItemClick;
             Musicfiles.Background = new SolidColorBrush(Windows.UI.Color.FromArgb(160, 160, 160, 160));
             Musicfiles.Margin = new Thickness(50.0, 50.0, 50.0, 50.0);
             // array for testen of het werkt 
