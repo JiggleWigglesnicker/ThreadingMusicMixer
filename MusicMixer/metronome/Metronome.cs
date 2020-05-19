@@ -5,7 +5,6 @@ namespace MusicMixer.metronome
 {
     class Metronome
     {
-
         private double bpm;
 
         /**
