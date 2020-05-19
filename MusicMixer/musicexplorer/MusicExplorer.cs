@@ -41,8 +41,7 @@ namespace MusicMixer.musicexplorer
                 MusicList.Add(musicfile);
                 
             }
-            //pakt muziek files wel maar nu weergeven aan zijkant van app, Naam ook strippen om weer te geven
-            int n1 = MusicList.Count;
+            
         }
 
     }

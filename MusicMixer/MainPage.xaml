@@ -65,7 +65,7 @@
                 Background="CornflowerBlue" 
                 Grid.Row="0" Grid.Column="0" 
                 SelectionChanged="ListView_SelectionChanged">
-                
+
             </ListView>
 
         </ScrollViewer>

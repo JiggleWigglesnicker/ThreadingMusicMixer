@@ -4,6 +4,7 @@ using System;
 using System.Collections.ObjectModel;
 using System.ServiceModel.Channels;
 using System.Threading;
+using System.Threading.Tasks;
 using Windows.Foundation;
 using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
@@ -25,17 +26,23 @@ namespace MusicMixer
         private MusicExplorer explorer;
         private FolderExplorer folder;
 
+         
         public MainPage()
         {
             folder = new FolderExplorer();
             explorer = new MusicExplorer();
-            int nn = explorer.MusicList.Count;
+            Task findMusic = new Task(async() =>
+            {
+                await explorer.FindNewMusic();
+                DataContext = explorer.MusicList;
+            }); 
+
             ApplicationView.PreferredLaunchViewSize = new Size(1920, 1080);
             ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.PreferredLaunchViewSize;
             InitializeComponent();
             bpmStop = false;
 
-            
+
         }
         void BpmClick(object sender, RoutedEventArgs e)
         {
