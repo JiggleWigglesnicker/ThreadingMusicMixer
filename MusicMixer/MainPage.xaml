@@ -91,7 +91,7 @@
                 Height="50"
                 Background="Green"
                 Content="Play"
-                FontSize="20" Click="Ply1_Click" RelativePanel.Below="musicPlayer1Title" Margin="25,0,0,0"
+                FontSize="20" Click="Play1_Click" RelativePanel.Below="musicPlayer1Title" Margin="25,0,0,0"
                 />
 
                 <Button x:Name="pz1"
@@ -100,7 +100,7 @@
                 Background="OrangeRed"
                 Content="Pause"
                 FontSize="20"
-                RelativePanel.RightOf="ply1" Click="Pz1_Click" RelativePanel.Below="musicPlayer1Title" Margin="25,0,0,0"
+                RelativePanel.RightOf="ply1" Click="Pause1_Click" RelativePanel.Below="musicPlayer1Title" Margin="25,0,0,0"
                 />
 
                 <Button x:Name="toggleMute1"
@@ -133,6 +133,7 @@
                 FontSize="20"
                 RelativePanel.RightOf="MiddleChannel1" Click="RightChannel1_click" RelativePanel.Below="pz1" Margin="25,25,0,0"
                 />
+                <Image Height="100" Width="100"/>
 
 
 
