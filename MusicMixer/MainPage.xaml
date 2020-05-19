@@ -59,14 +59,7 @@
         </RelativePanel>
 
         <ScrollViewer Background="LightSteelBlue">
-
-            <ListView  
-                Margin="30" 
-                Background="CornflowerBlue" 
-                Grid.Row="0" Grid.Column="0" 
-                SelectionChanged="ListView_SelectionChanged">
-
-            </ListView>
+            <StackPanel Name="MusicItemList"></StackPanel>
 
         </ScrollViewer>
 

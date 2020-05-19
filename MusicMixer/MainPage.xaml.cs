@@ -1,6 +1,7 @@
 ﻿using MusicMixer.metronome;
 using MusicMixer.musicexplorer;
 using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ServiceModel.Channels;
 using System.Threading;
@@ -26,24 +27,38 @@ namespace MusicMixer
         private MusicExplorer explorer;
         private FolderExplorer folder;
 
-         
+
         public MainPage()
         {
             folder = new FolderExplorer();
             explorer = new MusicExplorer();
-            Task findMusic = new Task(async() =>
+            Task findMusic = new Task(async () =>
             {
                 await explorer.FindNewMusic();
-                DataContext = explorer.MusicList;
-            }); 
+               
+            });
 
             ApplicationView.PreferredLaunchViewSize = new Size(1920, 1080);
             ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.PreferredLaunchViewSize;
             InitializeComponent();
             bpmStop = false;
 
-
+            //moet wachten tot task is uitgevoerd boven. anders null
+            CreateDynamicListItems();
         }
+
+        public void CreateDynamicListItems()
+        {
+            ListView Musicfiles = new ListView();
+            // array for testen of het werkt 
+            //String[] ll = new String[] { "wdw", "aaa", "cxc", "xzx", "plo", "qwe" };
+            foreach (var musicfile in explorer.MusicList)
+            {
+                Musicfiles.Items.Add(musicfile);
+            }
+            MusicItemList.Children.Add(Musicfiles);
+        }
+
         void BpmClick(object sender, RoutedEventArgs e)
         {
             playBtn.Foreground = new SolidColorBrush(Windows.UI.Colors.Blue);
