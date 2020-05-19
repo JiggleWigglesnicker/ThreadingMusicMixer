@@ -86,7 +86,7 @@ namespace MusicMixer.musicexplorer
         /// <summary>
         /// Set music player to mute.
         /// </summary>
-        /// <param name="value">True is mute false is unmute</param>
+        /// <param name="value">True is mute false is not muted</param>
         public void Mute(Boolean value)
         {
             mPlayer.IsMuted = value;
