@@ -42,13 +42,12 @@
                 Click="BpmClick"
                 Content="Start/Stop"
                 FontSize="20"
-                BorderBrush="Black" RelativePanel.RightOf="" RelativePanel.Below="" RelativePanel.AlignTopWith="" RelativePanel.AlignBottomWith="" RelativePanel.AlignRightWithPanel="True" Margin="0,0,25,0"
+                BorderBrush="Black" RelativePanel.RightOf="" RelativePanel.Below="metronomeBoxTitle" RelativePanel.AlignTopWith="" RelativePanel.AlignBottomWith="" RelativePanel.AlignRightWithPanel="True" Margin="0,0,25,0"
             />
             <TextBlock x:Name="metronomeBoxTitle" 
                        FontSize="40" 
                        Text="Metronome" 
                        TextWrapping="Wrap" 
-                       SelectionChanged="MetronomeBoxTitle_SelectionChanged" 
                        RelativePanel.Above="" 
                        RelativePanel.Below="" 
                        RelativePanel.AlignLeftWithPanel="True" 
@@ -79,7 +78,6 @@
                        FontSize="40" 
                        Text="Music Player 1" 
                        TextWrapping="Wrap" 
-                       SelectionChanged="MetronomeBoxTitle_SelectionChanged" 
                        RelativePanel.Above="" 
                        RelativePanel.Below="" 
                        RelativePanel.AlignLeftWithPanel="True" 
@@ -91,7 +89,7 @@
                 Height="50"
                 Background="Green"
                 Content="Play"
-                FontSize="20" Click="Ply1_Click" RelativePanel.Below="musicPlayer1Title" Margin="25,0,0,0"
+                FontSize="20" Click="Play1_Click" RelativePanel.Below="musicPlayer1Title" Margin="25,0,0,0"
                 />
 
                 <Button x:Name="pz1"
@@ -100,7 +98,7 @@
                 Background="OrangeRed"
                 Content="Pause"
                 FontSize="20"
-                RelativePanel.RightOf="ply1" Click="Pz1_Click" RelativePanel.Below="musicPlayer1Title" Margin="25,0,0,0"
+                RelativePanel.RightOf="ply1" Click="Pause1_Click" RelativePanel.Below="musicPlayer1Title" Margin="25,0,0,0"
                 />
 
                 <Button x:Name="toggleMute1"
@@ -133,6 +131,7 @@
                 FontSize="20"
                 RelativePanel.RightOf="MiddleChannel1" Click="RightChannel1_click" RelativePanel.Below="pz1" Margin="25,25,0,0"
                 />
+                <Image Height="100" Width="100"/>
 
 
 
@@ -144,7 +143,6 @@
                        FontSize="40" 
                        Text="Music Player 2" 
                        TextWrapping="Wrap" 
-                       SelectionChanged="MetronomeBoxTitle_SelectionChanged" 
                        RelativePanel.Above="" 
                        RelativePanel.Below="" 
                        RelativePanel.AlignLeftWithPanel="True" 

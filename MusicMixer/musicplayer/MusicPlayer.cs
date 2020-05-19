@@ -19,14 +19,14 @@ namespace MusicMixer.musicexplorer
             playing = false;                    // set playing bool to false
         }
 
-        public void playTrack(String mp3File)
+        public void PlayTrack(String musicFile)
         {
-            currentMusic = mp3File;
+            currentMusic = musicFile;
             ThreadPool.QueueUserWorkItem(
-                new WaitCallback(play));
+                new WaitCallback(Play));
         }
 
-        private async void play(Object ThreadObj)
+        private async void Play(Object ThreadObj)
         {
             Thread thread = Thread.CurrentThread;
             Windows.Storage.StorageFile file = await StorageFile.GetFileFromPathAsync(currentMusic);
@@ -38,19 +38,18 @@ namespace MusicMixer.musicexplorer
             playing = true;
         }
 
+        // Pauses or resumes the track
         public void PauseTrack()
         {
             if (playing)
             {
                 mPlayer.Pause();
                 playing = false;
-                Debug.WriteLine("pausing {0}", playing);
             }
             else
             {
                 mPlayer.Play();
                 playing = true;
-                Debug.WriteLine("resuming {0}", playing);
             }
         }
         // Change the channel of music. -1 is left 0 is middle 1 is right.
@@ -59,19 +58,22 @@ namespace MusicMixer.musicexplorer
             mPlayer.AudioBalance = channel;
         }
 
+        // Toggle mute between mute and unmute
         public void ToggleMute()
         {
+            //mute if unmuted
             if (mPlayer.IsMuted == false)
             {
                 mPlayer.IsMuted = true;
             }
+            //unmute if muted
             else if (mPlayer.IsMuted == true)
             {
                 mPlayer.IsMuted = false;
             }
         }
 
-        // set music player to mute. True is mute false is unmute
+        // Set music player to mute. True is mute false is unmute
         public void Mute(Boolean value)
         {
             mPlayer.IsMuted = value;

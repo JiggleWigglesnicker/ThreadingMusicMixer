@@ -58,15 +58,15 @@ namespace MusicMixer
 
         public void CreateDynamicListItems()
         {
-            ListView Musicfiles = new ListView();
-            Musicfiles.IsItemClickEnabled = true;
-            Musicfiles.IsEnabled = true;
+            ListView Musicfiles = new ListView
+            {
+                IsItemClickEnabled = true,
+                IsEnabled = true,
 
-            //Musicfiles.ItemClick += Musicfiles_ItemClick;
-            Musicfiles.Background = new SolidColorBrush(Windows.UI.Color.FromArgb(160, 160, 160, 160));
-            Musicfiles.Margin = new Thickness(50.0, 50.0, 50.0, 50.0);
+                Background = new SolidColorBrush(Windows.UI.Color.FromArgb(160, 160, 160, 160)),
+                Margin = new Thickness(50.0, 50.0, 50.0, 50.0)
+            };
             // array for testen of het werkt 
-            //String[] ll = new String[] { "wdw", "aaa", "cxc", "xzx", "plo", "qwe" };
             if (explorer.MusicList.Count != 0)
             {
                 foreach (var musicfile in explorer.MusicList)
@@ -83,7 +83,6 @@ namespace MusicMixer
                     Musicfiles.Items.Add("NO MUSIC TRACKS FOUND");
                     Musicfiles.ItemClick += Musicfiles_ItemClick;
                 }
-                //Musicfiles.Items.Add("NO MUSIC TRACKS FOUND");
                 MusicItemList.Children.Add(Musicfiles);
             }
 
@@ -91,12 +90,7 @@ namespace MusicMixer
 
         private void Musicfiles_ItemClick(object sender, ItemClickEventArgs e)
         {
-
             musicLibraryPath = Windows.Storage.KnownFolders.MusicLibrary.Path + e.ClickedItem.ToString();
-            Debug.WriteLine("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
-            Debug.WriteLine(musicLibraryPath);
-            Debug.WriteLine("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
-
         }
 
         void BpmClick(object sender, RoutedEventArgs e)
@@ -123,33 +117,33 @@ namespace MusicMixer
 
 
         // Music Player 1
-        private void Ply1_Click(object sender, RoutedEventArgs e)
+        //Play track button
+        private void Play1_Click(object sender, RoutedEventArgs e)
         {
-             musicPlayer1.playTrack(musicLibraryPath);
+             musicPlayer1.PlayTrack(musicLibraryPath);
 
         }
-
-        private void Pz1_Click(object sender, RoutedEventArgs e)
+        // Pause or resume track button
+        private void Pause1_Click(object sender, RoutedEventArgs e)
         {
             musicPlayer1.PauseTrack();
         }
-
-
+        // Set audio to left channel
         private void LeftChannel1_click(object sender, RoutedEventArgs e)
         {
             musicPlayer1.ChangeChannel(-1);
         }
-
+        // Set audio to middle channel
         private void MiddleChannel1_click(object sender, RoutedEventArgs e)
         {
             musicPlayer1.ChangeChannel(0);
         }
-
+        // Set audio to right channel
         private void RightChannel1_click(object sender, RoutedEventArgs e)
         {
             musicPlayer1.ChangeChannel(+1);
         }
-
+        // Toggle mute 
         private void ToggleMute1_click(object sender, RoutedEventArgs e)
         {
             musicPlayer1.ToggleMute();
@@ -160,50 +154,40 @@ namespace MusicMixer
         // Music Player 2
         private void Ply2_Click(object sender, RoutedEventArgs e)
         {
-            musicPlayer2.playTrack(musicLibraryPath);
+            musicPlayer2.PlayTrack(musicLibraryPath);
         }
-
+        // Pause or resume track button
         private void Pz2_Click(object sender, RoutedEventArgs e)
         {
             musicPlayer2.PauseTrack();
         }
-
+        // Set audio to left channel
         private void LeftChannel2_click(object sender, RoutedEventArgs e)
         {
             musicPlayer2.ChangeChannel(-1);
         }
-
+        // Set audio to middle channel
         private void MiddleChannel2_click(object sender, RoutedEventArgs e)
         {
             musicPlayer2.ChangeChannel(0);
         }
-
+        // Set audio to right channel
         private void RightChannel2_click(object sender, RoutedEventArgs e)
         {
             musicPlayer2.ChangeChannel(+1);
         }
-
+        // Toggle mute 
         private void ToggleMute2_click(object sender, RoutedEventArgs e)
         {
             musicPlayer2.ToggleMute();
         }
-
-        private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
-
-        private void MetronomeBoxTitle_SelectionChanged(object sender, RoutedEventArgs e)
-        {
-
-        }
-        
+        // Mute all music players
         private void MuteAll_Click(object sender, RoutedEventArgs e)
         {
             musicPlayer1.Mute(true);
             musicPlayer2.Mute(true);
         }
-
+        // Unmute all music players
         private void UnmuteAll_Click(object sender, RoutedEventArgs e)
         {
             musicPlayer1.Mute(false);
