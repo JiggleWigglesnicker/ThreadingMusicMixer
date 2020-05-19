@@ -10,7 +10,7 @@ namespace MusicMixer.musicexplorer
     class MusicFile
     {
         public String FilePath { get; set; }
-
+        public String FileName { get; set; }
         public MusicFile(String filepath)
         {
             FilePath = filepath;
