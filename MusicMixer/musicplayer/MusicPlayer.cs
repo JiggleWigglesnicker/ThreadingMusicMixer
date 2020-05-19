@@ -28,8 +28,7 @@ namespace MusicMixer.musicexplorer
 
         private async void Play(Object ThreadObj)
         {
-            Thread thread = Thread.CurrentThread;
-            Windows.Storage.StorageFile file = await StorageFile.GetFileFromPathAsync(currentMusic);
+            StorageFile file = await StorageFile.GetFileFromPathAsync(currentMusic);
 
             mPlayer.AutoPlay = false;
             mPlayer.Source = MediaSource.CreateFromStorageFile(file);
