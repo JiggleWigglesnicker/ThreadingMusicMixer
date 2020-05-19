@@ -9,7 +9,7 @@ namespace MusicMixer.musicexplorer
 {
     class MusicPlayer
     {
-        MediaPlayer mPlayer;
+        readonly MediaPlayer mPlayer;
         bool playing;
         String currentMusic;
 
@@ -80,6 +80,16 @@ namespace MusicMixer.musicexplorer
         public void Mute(Boolean value)
         {
             mPlayer.IsMuted = value;
+        }
+        // Lower the volume of music player
+        public void VolumeDown()
+        {
+            mPlayer.Volume = mPlayer.Volume - 1;
+        }
+        // Higher the volume of music player
+        public void VolumeUp()
+        {
+            mPlayer.Volume = mPlayer.Volume + 1;
         }
     }
 }

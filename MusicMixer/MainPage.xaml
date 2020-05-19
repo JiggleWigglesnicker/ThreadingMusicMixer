@@ -131,7 +131,22 @@
                 FontSize="20"
                 RelativePanel.RightOf="MiddleChannel1" Click="RightChannel1_click" RelativePanel.Below="pz1" Margin="25,25,0,0"
                 />
-                <Image Height="100" Width="100"/>
+                
+                <Button x:Name="volumeDown"
+                Width="150"
+                Height="50"
+                Content="Volume Down"
+                FontSize="20"
+                RelativePanel.RightOf="" Click="VolumeDown1_click" RelativePanel.Below="leftChannel1" Margin="25,25,0,0"
+                />
+                
+                <Button x:Name="volumeUp"
+                Width="150"
+                Height="50"
+                Content="Volume Up"
+                FontSize="20"
+                RelativePanel.RightOf="volumeDown" Click="VolumeUp1_click" RelativePanel.Below="MiddleChannel1" Margin="25,25,0,0"
+                />
 
 
 

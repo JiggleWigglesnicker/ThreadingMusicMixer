@@ -193,5 +193,15 @@ namespace MusicMixer
             musicPlayer1.Mute(false);
             musicPlayer2.Mute(false);
         }
+
+        private void VolumeDown1_click(object sender, RoutedEventArgs e)
+        {
+            musicPlayer1.VolumeDown();
+        }
+        private void VolumeUp1_click(object sender, RoutedEventArgs e)
+        {
+            musicPlayer1.VolumeUp();
+        }
+
     }
 }
