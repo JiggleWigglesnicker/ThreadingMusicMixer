@@ -42,7 +42,7 @@
                 Click="BpmClick"
                 Content="Start/Stop"
                 FontSize="20"
-                BorderBrush="Black" RelativePanel.RightOf="" RelativePanel.Below="" RelativePanel.AlignTopWith="" RelativePanel.AlignBottomWith="" RelativePanel.AlignRightWithPanel="True" Margin="0,0,25,0"
+                BorderBrush="Black" RelativePanel.RightOf="" RelativePanel.Below="metronomeBoxTitle" RelativePanel.AlignTopWith="" RelativePanel.AlignBottomWith="" RelativePanel.AlignRightWithPanel="True" Margin="0,0,25,0"
             />
             <TextBlock x:Name="metronomeBoxTitle" 
                        FontSize="40" 
