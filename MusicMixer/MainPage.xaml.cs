@@ -27,6 +27,7 @@ namespace MusicMixer
         private Thread metroThread;
         public Boolean bpmStop;
         private MusicPlayer musicPlayer = new MusicPlayer();
+        private MusicPlayer musicPlayer2 = new MusicPlayer();
         private MusicExplorer explorer;
 
 
@@ -117,9 +118,11 @@ namespace MusicMixer
             bpmStop = false;
         }
 
-        private async void Ply1_Click(object sender, RoutedEventArgs e)
+
+        // Music Player 1
+        private void Ply1_Click(object sender, RoutedEventArgs e)
         {
-            musicPlayer.playTrack();
+             musicPlayer.playTrack();
         }
 
         private void Pz1_Click(object sender, RoutedEventArgs e)
@@ -147,9 +150,47 @@ namespace MusicMixer
             musicPlayer.changeChannel(+1);
         }
 
-        private void ToggleMute_click(object sender, RoutedEventArgs e)
+        private void ToggleMute1_click(object sender, RoutedEventArgs e)
         {
             musicPlayer.toggleMute();
+        }
+
+
+
+        // Music Player 2
+        private void Ply2_Click(object sender, RoutedEventArgs e)
+        {
+            musicPlayer2.playTrack();
+        }
+
+        private void Pz2_Click(object sender, RoutedEventArgs e)
+        {
+            musicPlayer2.pauseTrack();
+        }
+
+        private void stp2_Click(object sender, RoutedEventArgs e)
+        {
+            //musicPlayer2.stopTrack();
+        }
+
+        private void LeftChannel2_click(object sender, RoutedEventArgs e)
+        {
+            musicPlayer2.changeChannel(-1);
+        }
+
+        private void MiddleChannel2_click(object sender, RoutedEventArgs e)
+        {
+            musicPlayer2.changeChannel(0);
+        }
+
+        private void RightChannel2_click(object sender, RoutedEventArgs e)
+        {
+            musicPlayer2.changeChannel(+1);
+        }
+
+        private void ToggleMute2_click(object sender, RoutedEventArgs e)
+        {
+            musicPlayer2.toggleMute();
         }
 
         private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)

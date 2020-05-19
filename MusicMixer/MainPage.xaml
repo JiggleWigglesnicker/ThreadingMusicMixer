@@ -108,7 +108,7 @@
                 Height="50"
                 Content="(un)mute"
                 FontSize="20"
-                RelativePanel.RightOf="pz1" Click="ToggleMute_click" RelativePanel.Below="musicPlayer1Title" Margin="25,0,0,0"
+                RelativePanel.RightOf="pz1" Click="ToggleMute1_click" RelativePanel.Below="musicPlayer1Title" Margin="25,0,0,0"
                 />
 
 
@@ -174,7 +174,7 @@
                 Height="50"
                 Content="(un)mute"
                 FontSize="20"
-                RelativePanel.RightOf="pz2" Click="ToggleMute_click" RelativePanel.Below="musicPlayer2Title" Margin="25,0,0,0"
+                RelativePanel.RightOf="pz2" Click="ToggleMute2_click" RelativePanel.Below="musicPlayer2Title" Margin="25,0,0,0"
                 />
 
 
