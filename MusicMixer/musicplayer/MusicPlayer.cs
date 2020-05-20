@@ -8,9 +8,9 @@ namespace MusicMixer.musicexplorer
 {
     class MusicPlayer
     {
-        readonly MediaPlayer mPlayer;
-        bool playing;
-        String currentMusic;
+        readonly MediaPlayer mPlayer; // the mediaplayer
+        bool playing;   // bool to check if mediaplayer is playing
+        String currentMusic; // currentsong being played
 
         public MusicPlayer()
         {
@@ -27,16 +27,16 @@ namespace MusicMixer.musicexplorer
         
         private async void Play(Object ThreadObj)
         {
-            // Check if a song is selected
-            if(currentMusic == null)
+            
+            if(currentMusic == null) // Check if a song is selected
             {
                 return; 
             }
             Windows.Storage.StorageFile file = await StorageFile.GetFileFromPathAsync(currentMusic); // Select Windows Music folder as selected folder
 
-            mPlayer.AutoPlay = false;
-            mPlayer.Source = MediaSource.CreateFromStorageFile(file);
-            mPlayer.Play();
+            mPlayer.AutoPlay = false; // disables autoplay from mPlayer
+            mPlayer.Source = MediaSource.CreateFromStorageFile(file); // creates a mediasource for mPlayer
+            mPlayer.Play(); // plays the mPlayer
 
             playing = true;
         }
@@ -70,13 +70,12 @@ namespace MusicMixer.musicexplorer
         /// </summary>
         public void ToggleMute()
         {
-            //mute if unmuted
-            if (mPlayer.IsMuted == false)
+            
+            if (mPlayer.IsMuted == false) //mute if unmuted
             {
                 mPlayer.IsMuted = true;
             }
-            //unmute if muted
-            else if (mPlayer.IsMuted == true)
+            else if (mPlayer.IsMuted == true) //unmute if muted
             {
                 mPlayer.IsMuted = false;
             }
